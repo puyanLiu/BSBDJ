@@ -1,0 +1,38 @@
+//
+//  PrefixHeader.pch
+//  BSBDJProject
+//
+//  Created by 刘蒲艳 on 15/7/22.
+//  Copyright (c) 2015年 liupuyan. All rights reserved.
+//
+
+#ifndef BSBDJProject_PrefixHeader_pch
+#define BSBDJProject_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __OBJC__
+
+// Log
+#ifdef DEBUG
+#define LPYLog(...) NSLog(__VA_ARGS__)
+#else
+#define LPYLog(...)
+#endif
+
+#define LPYColor(r,g,b) [UIColor colorWithRed:(r / 255.0) green:(r / 255.0) blue:(r / 255.0) alpha:1.0]
+
+// BackgroundColor
+#define LPYBackgroundColor self.view.backgroundColor = LPYColor(223, 223, 223)
+
+
+#import "UIImage+LPYImage.h"
+#import "UIView+LPYView.h"
+#import "UIBarButtonItem+LPYBarButtonItem.h"
+
+
+
+#endif
+
+#endif

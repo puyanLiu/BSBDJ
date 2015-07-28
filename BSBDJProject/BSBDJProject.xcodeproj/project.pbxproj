@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C440BB121B64F3D7008A026D /* LPYLoginOrRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C440BB101B64F3D7008A026D /* LPYLoginOrRegisterViewController.m */; };
+		C440BB131B64F3D7008A026D /* LPYLoginOrRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C440BB111B64F3D7008A026D /* LPYLoginOrRegisterViewController.xib */; };
+		C440BB161B64F475008A026D /* LPYPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = C440BB151B64F475008A026D /* LPYPushGuideView.m */; };
+		C440BB181B64F503008A026D /* LPYPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C440BB171B64F503008A026D /* LPYPushGuideView.xib */; };
+		C440BB1B1B650267008A026D /* LPYContentVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C440BB1A1B650267008A026D /* LPYContentVerticalButton.m */; };
+		C440BB1E1B651128008A026D /* LPYLoginOrRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C440BB1D1B651128008A026D /* LPYLoginOrRegisterTextField.m */; };
 		C471D06A1B5FD87400BAD5D4 /* UIImage+LPYImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C471D0671B5FD87400BAD5D4 /* UIImage+LPYImage.m */; };
 		C471D06B1B5FD87400BAD5D4 /* UIView+LPYView.m in Sources */ = {isa = PBXBuildFile; fileRef = C471D0691B5FD87400BAD5D4 /* UIView+LPYView.m */; };
 		C471D06E1B5FE3CC00BAD5D4 /* LPYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C471D06D1B5FE3CC00BAD5D4 /* LPYTabBar.m */; };
@@ -19,6 +25,21 @@
 		C471D0851B5FF41000BAD5D4 /* UIBarButtonItem+LPYBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C471D0841B5FF41000BAD5D4 /* UIBarButtonItem+LPYBarButtonItem.m */; };
 		C471D0891B5FFB1900BAD5D4 /* LPYRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C471D0871B5FFB1900BAD5D4 /* LPYRecommendViewController.m */; };
 		C471D08A1B5FFB1900BAD5D4 /* LPYRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C471D0881B5FFB1900BAD5D4 /* LPYRecommendViewController.xib */; };
+		C4809BAD1B61D59700E60BCF /* LPYCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4809BAB1B61D59700E60BCF /* LPYCategoryCell.m */; };
+		C4809BAE1B61D59700E60BCF /* LPYCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4809BAC1B61D59700E60BCF /* LPYCategoryCell.xib */; };
+		C4809BB11B61D61B00E60BCF /* LPYCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4809BB01B61D61B00E60BCF /* LPYCategoryModel.m */; };
+		C4809BB51B61E73200E60BCF /* LPYUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4809BB31B61E73200E60BCF /* LPYUserCell.m */; };
+		C4809BB61B61E73200E60BCF /* LPYUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4809BB41B61E73200E60BCF /* LPYUserCell.xib */; };
+		C4809BB91B61F8DB00E60BCF /* LPYRecommendUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4809BB81B61F8DB00E60BCF /* LPYRecommendUserModel.m */; };
+		C48DC53B1B65484E0018C568 /* LPYEssenceAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C48DC53A1B65484E0018C568 /* LPYEssenceAllViewController.m */; };
+		C48DC53E1B65487A0018C568 /* LPYEssenceVedioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C48DC53D1B65487A0018C568 /* LPYEssenceVedioViewController.m */; };
+		C48DC5411B65488C0018C568 /* LPYEssenceSoundsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C48DC5401B65488C0018C568 /* LPYEssenceSoundsViewController.m */; };
+		C48DC5441B65489F0018C568 /* LPYEssencePictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C48DC5431B65489F0018C568 /* LPYEssencePictureViewController.m */; };
+		C48DC5471B6548D00018C568 /* LPYEssenceSegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C48DC5461B6548D00018C568 /* LPYEssenceSegmentViewController.m */; };
+		C493FD361B62A1420046ACEB /* LPYRecommendTagsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C493FD351B62A1420046ACEB /* LPYRecommendTagsController.m */; };
+		C493FD3A1B62A15A0046ACEB /* LPYRecommendTagsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C493FD381B62A15A0046ACEB /* LPYRecommendTagsCell.m */; };
+		C493FD3B1B62A15A0046ACEB /* LPYRecommendTagsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C493FD391B62A15A0046ACEB /* LPYRecommendTagsCell.xib */; };
+		C493FD3E1B62A1E10046ACEB /* LPYRecommendTagsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C493FD3D1B62A1E10046ACEB /* LPYRecommendTagsModel.m */; };
 		C4A352431B5FC033002C2E39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A352421B5FC033002C2E39 /* main.m */; };
 		C4A3524C1B5FC033002C2E39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A3524A1B5FC033002C2E39 /* Main.storyboard */; };
 		C4A3524E1B5FC033002C2E39 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A3524D1B5FC033002C2E39 /* Images.xcassets */; };
@@ -43,6 +64,16 @@
 		227593505CE3E523499F3A55 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AC99A7803F0A4CA7B272A99A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFF9F8E5BC9AF9776052203D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		C440BB0F1B64F3D7008A026D /* LPYLoginOrRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYLoginOrRegisterViewController.h; sourceTree = "<group>"; };
+		C440BB101B64F3D7008A026D /* LPYLoginOrRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYLoginOrRegisterViewController.m; sourceTree = "<group>"; };
+		C440BB111B64F3D7008A026D /* LPYLoginOrRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPYLoginOrRegisterViewController.xib; sourceTree = "<group>"; };
+		C440BB141B64F475008A026D /* LPYPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYPushGuideView.h; sourceTree = "<group>"; };
+		C440BB151B64F475008A026D /* LPYPushGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYPushGuideView.m; sourceTree = "<group>"; };
+		C440BB171B64F503008A026D /* LPYPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPYPushGuideView.xib; sourceTree = "<group>"; };
+		C440BB191B650267008A026D /* LPYContentVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYContentVerticalButton.h; sourceTree = "<group>"; };
+		C440BB1A1B650267008A026D /* LPYContentVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYContentVerticalButton.m; sourceTree = "<group>"; };
+		C440BB1C1B651128008A026D /* LPYLoginOrRegisterTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYLoginOrRegisterTextField.h; sourceTree = "<group>"; };
+		C440BB1D1B651128008A026D /* LPYLoginOrRegisterTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYLoginOrRegisterTextField.m; sourceTree = "<group>"; };
 		C471D0651B5FD6C400BAD5D4 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		C471D0661B5FD87400BAD5D4 /* UIImage+LPYImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LPYImage.h"; sourceTree = "<group>"; };
 		C471D0671B5FD87400BAD5D4 /* UIImage+LPYImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LPYImage.m"; sourceTree = "<group>"; };
@@ -66,6 +97,33 @@
 		C471D0861B5FFB1900BAD5D4 /* LPYRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYRecommendViewController.h; sourceTree = "<group>"; };
 		C471D0871B5FFB1900BAD5D4 /* LPYRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYRecommendViewController.m; sourceTree = "<group>"; };
 		C471D0881B5FFB1900BAD5D4 /* LPYRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPYRecommendViewController.xib; sourceTree = "<group>"; };
+		C4809BAA1B61D59700E60BCF /* LPYCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYCategoryCell.h; sourceTree = "<group>"; };
+		C4809BAB1B61D59700E60BCF /* LPYCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYCategoryCell.m; sourceTree = "<group>"; };
+		C4809BAC1B61D59700E60BCF /* LPYCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPYCategoryCell.xib; sourceTree = "<group>"; };
+		C4809BAF1B61D61B00E60BCF /* LPYCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYCategoryModel.h; sourceTree = "<group>"; };
+		C4809BB01B61D61B00E60BCF /* LPYCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYCategoryModel.m; sourceTree = "<group>"; };
+		C4809BB21B61E73200E60BCF /* LPYUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYUserCell.h; sourceTree = "<group>"; };
+		C4809BB31B61E73200E60BCF /* LPYUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYUserCell.m; sourceTree = "<group>"; };
+		C4809BB41B61E73200E60BCF /* LPYUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPYUserCell.xib; sourceTree = "<group>"; };
+		C4809BB71B61F8DB00E60BCF /* LPYRecommendUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYRecommendUserModel.h; sourceTree = "<group>"; };
+		C4809BB81B61F8DB00E60BCF /* LPYRecommendUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYRecommendUserModel.m; sourceTree = "<group>"; };
+		C48DC5391B65484E0018C568 /* LPYEssenceAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYEssenceAllViewController.h; sourceTree = "<group>"; };
+		C48DC53A1B65484E0018C568 /* LPYEssenceAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYEssenceAllViewController.m; sourceTree = "<group>"; };
+		C48DC53C1B65487A0018C568 /* LPYEssenceVedioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYEssenceVedioViewController.h; sourceTree = "<group>"; };
+		C48DC53D1B65487A0018C568 /* LPYEssenceVedioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYEssenceVedioViewController.m; sourceTree = "<group>"; };
+		C48DC53F1B65488C0018C568 /* LPYEssenceSoundsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYEssenceSoundsViewController.h; sourceTree = "<group>"; };
+		C48DC5401B65488C0018C568 /* LPYEssenceSoundsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYEssenceSoundsViewController.m; sourceTree = "<group>"; };
+		C48DC5421B65489F0018C568 /* LPYEssencePictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYEssencePictureViewController.h; sourceTree = "<group>"; };
+		C48DC5431B65489F0018C568 /* LPYEssencePictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYEssencePictureViewController.m; sourceTree = "<group>"; };
+		C48DC5451B6548D00018C568 /* LPYEssenceSegmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYEssenceSegmentViewController.h; sourceTree = "<group>"; };
+		C48DC5461B6548D00018C568 /* LPYEssenceSegmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYEssenceSegmentViewController.m; sourceTree = "<group>"; };
+		C493FD341B62A1420046ACEB /* LPYRecommendTagsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYRecommendTagsController.h; sourceTree = "<group>"; };
+		C493FD351B62A1420046ACEB /* LPYRecommendTagsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYRecommendTagsController.m; sourceTree = "<group>"; };
+		C493FD371B62A15A0046ACEB /* LPYRecommendTagsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYRecommendTagsCell.h; sourceTree = "<group>"; };
+		C493FD381B62A15A0046ACEB /* LPYRecommendTagsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYRecommendTagsCell.m; sourceTree = "<group>"; };
+		C493FD391B62A15A0046ACEB /* LPYRecommendTagsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPYRecommendTagsCell.xib; sourceTree = "<group>"; };
+		C493FD3C1B62A1E10046ACEB /* LPYRecommendTagsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYRecommendTagsModel.h; sourceTree = "<group>"; };
+		C493FD3D1B62A1E10046ACEB /* LPYRecommendTagsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYRecommendTagsModel.m; sourceTree = "<group>"; };
 		C4A3523D1B5FC033002C2E39 /* BSBDJProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BSBDJProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A352411B5FC033002C2E39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4A352421B5FC033002C2E39 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -217,6 +275,18 @@
 			children = (
 				C471D07A1B5FF14300BAD5D4 /* LPYEssenceViewController.h */,
 				C471D07B1B5FF14300BAD5D4 /* LPYEssenceViewController.m */,
+				C493FD341B62A1420046ACEB /* LPYRecommendTagsController.h */,
+				C493FD351B62A1420046ACEB /* LPYRecommendTagsController.m */,
+				C48DC5391B65484E0018C568 /* LPYEssenceAllViewController.h */,
+				C48DC53A1B65484E0018C568 /* LPYEssenceAllViewController.m */,
+				C48DC53C1B65487A0018C568 /* LPYEssenceVedioViewController.h */,
+				C48DC53D1B65487A0018C568 /* LPYEssenceVedioViewController.m */,
+				C48DC53F1B65488C0018C568 /* LPYEssenceSoundsViewController.h */,
+				C48DC5401B65488C0018C568 /* LPYEssenceSoundsViewController.m */,
+				C48DC5421B65489F0018C568 /* LPYEssencePictureViewController.h */,
+				C48DC5431B65489F0018C568 /* LPYEssencePictureViewController.m */,
+				C48DC5451B6548D00018C568 /* LPYEssenceSegmentViewController.h */,
+				C48DC5461B6548D00018C568 /* LPYEssenceSegmentViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -224,6 +294,8 @@
 		C4A352691B5FC31D002C2E39 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C493FD3C1B62A1E10046ACEB /* LPYRecommendTagsModel.h */,
+				C493FD3D1B62A1E10046ACEB /* LPYRecommendTagsModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -231,6 +303,9 @@
 		C4A3526A1B5FC31D002C2E39 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C493FD371B62A15A0046ACEB /* LPYRecommendTagsCell.h */,
+				C493FD381B62A15A0046ACEB /* LPYRecommendTagsCell.m */,
+				C493FD391B62A15A0046ACEB /* LPYRecommendTagsCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -254,6 +329,9 @@
 				C471D0861B5FFB1900BAD5D4 /* LPYRecommendViewController.h */,
 				C471D0871B5FFB1900BAD5D4 /* LPYRecommendViewController.m */,
 				C471D0881B5FFB1900BAD5D4 /* LPYRecommendViewController.xib */,
+				C440BB0F1B64F3D7008A026D /* LPYLoginOrRegisterViewController.h */,
+				C440BB101B64F3D7008A026D /* LPYLoginOrRegisterViewController.m */,
+				C440BB111B64F3D7008A026D /* LPYLoginOrRegisterViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -261,6 +339,10 @@
 		C4A3526D1B5FC31D002C2E39 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C4809BAF1B61D61B00E60BCF /* LPYCategoryModel.h */,
+				C4809BB01B61D61B00E60BCF /* LPYCategoryModel.m */,
+				C4809BB71B61F8DB00E60BCF /* LPYRecommendUserModel.h */,
+				C4809BB81B61F8DB00E60BCF /* LPYRecommendUserModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -268,6 +350,16 @@
 		C4A3526E1B5FC31D002C2E39 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C4809BAA1B61D59700E60BCF /* LPYCategoryCell.h */,
+				C4809BAB1B61D59700E60BCF /* LPYCategoryCell.m */,
+				C4809BAC1B61D59700E60BCF /* LPYCategoryCell.xib */,
+				C4809BB21B61E73200E60BCF /* LPYUserCell.h */,
+				C4809BB31B61E73200E60BCF /* LPYUserCell.m */,
+				C4809BB41B61E73200E60BCF /* LPYUserCell.xib */,
+				C440BB191B650267008A026D /* LPYContentVerticalButton.h */,
+				C440BB1A1B650267008A026D /* LPYContentVerticalButton.m */,
+				C440BB1C1B651128008A026D /* LPYLoginOrRegisterTextField.h */,
+				C440BB1D1B651128008A026D /* LPYLoginOrRegisterTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -355,6 +447,9 @@
 			children = (
 				C471D06C1B5FE3CC00BAD5D4 /* LPYTabBar.h */,
 				C471D06D1B5FE3CC00BAD5D4 /* LPYTabBar.m */,
+				C440BB141B64F475008A026D /* LPYPushGuideView.h */,
+				C440BB151B64F475008A026D /* LPYPushGuideView.m */,
+				C440BB171B64F503008A026D /* LPYPushGuideView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -484,11 +579,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C440BB131B64F3D7008A026D /* LPYLoginOrRegisterViewController.xib in Resources */,
+				C4809BB61B61E73200E60BCF /* LPYUserCell.xib in Resources */,
 				C4A3524C1B5FC033002C2E39 /* Main.storyboard in Resources */,
 				C4A352511B5FC034002C2E39 /* LaunchScreen.xib in Resources */,
 				C471D08A1B5FFB1900BAD5D4 /* LPYRecommendViewController.xib in Resources */,
+				C4809BAE1B61D59700E60BCF /* LPYCategoryCell.xib in Resources */,
 				C471D0791B5FECE400BAD5D4 /* LPYFriendTrendsViewController.xib in Resources */,
 				C4A3524E1B5FC033002C2E39 /* Images.xcassets in Resources */,
+				C493FD3B1B62A15A0046ACEB /* LPYRecommendTagsCell.xib in Resources */,
+				C440BB181B64F503008A026D /* LPYPushGuideView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,17 +640,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				C471D07C1B5FF14300BAD5D4 /* LPYEssenceViewController.m in Sources */,
+				C493FD3E1B62A1E10046ACEB /* LPYRecommendTagsModel.m in Sources */,
 				C4A352811B5FC31D002C2E39 /* AppDelegate.m in Sources */,
 				C471D06E1B5FE3CC00BAD5D4 /* LPYTabBar.m in Sources */,
+				C48DC53B1B65484E0018C568 /* LPYEssenceAllViewController.m in Sources */,
+				C48DC5411B65488C0018C568 /* LPYEssenceSoundsViewController.m in Sources */,
+				C48DC5441B65489F0018C568 /* LPYEssencePictureViewController.m in Sources */,
 				C471D07F1B5FF15900BAD5D4 /* LPYNewViewController.m in Sources */,
+				C440BB1E1B651128008A026D /* LPYLoginOrRegisterTextField.m in Sources */,
 				C471D0711B5FE9D300BAD5D4 /* LPYNavigationController.m in Sources */,
+				C4809BB11B61D61B00E60BCF /* LPYCategoryModel.m in Sources */,
 				C471D06B1B5FD87400BAD5D4 /* UIView+LPYView.m in Sources */,
 				C4A352431B5FC033002C2E39 /* main.m in Sources */,
+				C48DC53E1B65487A0018C568 /* LPYEssenceVedioViewController.m in Sources */,
+				C493FD3A1B62A15A0046ACEB /* LPYRecommendTagsCell.m in Sources */,
+				C4809BB91B61F8DB00E60BCF /* LPYRecommendUserModel.m in Sources */,
+				C493FD361B62A1420046ACEB /* LPYRecommendTagsController.m in Sources */,
+				C4809BAD1B61D59700E60BCF /* LPYCategoryCell.m in Sources */,
+				C440BB161B64F475008A026D /* LPYPushGuideView.m in Sources */,
 				C4B418411B5FC9090096569F /* LPYTabBarController.m in Sources */,
 				C471D0781B5FECE400BAD5D4 /* LPYFriendTrendsViewController.m in Sources */,
+				C48DC5471B6548D00018C568 /* LPYEssenceSegmentViewController.m in Sources */,
 				C471D06A1B5FD87400BAD5D4 /* UIImage+LPYImage.m in Sources */,
+				C4809BB51B61E73200E60BCF /* LPYUserCell.m in Sources */,
+				C440BB1B1B650267008A026D /* LPYContentVerticalButton.m in Sources */,
 				C471D0821B5FF16E00BAD5D4 /* LPYMeViewController.m in Sources */,
 				C471D0851B5FF41000BAD5D4 /* UIBarButtonItem+LPYBarButtonItem.m in Sources */,
+				C440BB121B64F3D7008A026D /* LPYLoginOrRegisterViewController.m in Sources */,
 				C471D0891B5FFB1900BAD5D4 /* LPYRecommendViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

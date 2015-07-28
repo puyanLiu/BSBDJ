@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7B647AAA55A3480DA1F3022575A919D513A4AF79",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7B647AAA55A3480DA1F3022575A919D513A4AF79" : 0,
+    "76BBEF0F49DAA7B65DF22D8DC82C63F45326DFC2" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3BAB8C2C-7C62-4F24-B569-AB3254585C92",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7B647AAA55A3480DA1F3022575A919D513A4AF79" : "BSBDJ",
+    "76BBEF0F49DAA7B65DF22D8DC82C63F45326DFC2" : "0722%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "BSBDJProject",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 203,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "BSBDJProject\/BSBDJProject.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/puyanLiu\/0722-.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "76BBEF0F49DAA7B65DF22D8DC82C63F45326DFC2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/puyanLiu\/BSBDJ.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7B647AAA55A3480DA1F3022575A919D513A4AF79"
+    }
+  ]
+}

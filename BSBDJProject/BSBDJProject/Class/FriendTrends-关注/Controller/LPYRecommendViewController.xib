@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LPYRecommendViewController">
             <connections>
+                <outlet property="categoryTableView" destination="EtT-m5-m1y" id="kA2-YK-OJf"/>
+                <outlet property="userTableView" destination="SQc-JK-9ol" id="1cA-PE-7f4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,7 +15,29 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="EtT-m5-m1y">
+                    <rect key="frame" x="0.0" y="0.0" width="70" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="7A2-BH-sqC"/>
+                    </constraints>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="SQc-JK-9ol">
+                    <rect key="frame" x="70" y="0.0" width="530" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="EtT-m5-m1y" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1Dc-3Y-hze"/>
+                <constraint firstAttribute="bottom" secondItem="SQc-JK-9ol" secondAttribute="bottom" id="7n7-N0-Lfh"/>
+                <constraint firstItem="SQc-JK-9ol" firstAttribute="leading" secondItem="EtT-m5-m1y" secondAttribute="trailing" id="CHg-uT-gxU"/>
+                <constraint firstAttribute="bottom" secondItem="EtT-m5-m1y" secondAttribute="bottom" id="E9a-I2-z8p"/>
+                <constraint firstItem="EtT-m5-m1y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LAS-9c-JHb"/>
+                <constraint firstAttribute="trailing" secondItem="SQc-JK-9ol" secondAttribute="trailing" id="eiN-Im-LRQ"/>
+                <constraint firstItem="SQc-JK-9ol" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="jFc-Gt-R2U"/>
+            </constraints>
         </view>
     </objects>
 </document>

@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LPYFriendTrendsViewController">
             <connections>
+                <outlet property="lblLogin" destination="M9K-Ri-fBQ" id="FVV-mV-h89"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -43,6 +44,9 @@
                     <state key="highlighted" backgroundImage="friendsTrend_login_click">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="btnLoginOrRegisterClick" destination="-1" eventType="touchUpInside" id="LTy-8m-K3J"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

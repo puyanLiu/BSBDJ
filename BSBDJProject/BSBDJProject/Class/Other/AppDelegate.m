@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LPYTabBarController.h"
+#import "LPYPushGuideView.h"
 
 @interface AppDelegate ()
 
@@ -28,6 +29,9 @@
     self.window.rootViewController = tabBarController;
     
     [self.window makeKeyAndVisible];
+    
+    // 显示推送引导
+    [LPYPushGuideView show];
     
     return YES;
 }

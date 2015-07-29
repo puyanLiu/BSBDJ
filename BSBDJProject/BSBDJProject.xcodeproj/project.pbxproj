@@ -13,6 +13,8 @@
 		C440BB181B64F503008A026D /* LPYPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C440BB171B64F503008A026D /* LPYPushGuideView.xib */; };
 		C440BB1B1B650267008A026D /* LPYContentVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C440BB1A1B650267008A026D /* LPYContentVerticalButton.m */; };
 		C440BB1E1B651128008A026D /* LPYLoginOrRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C440BB1D1B651128008A026D /* LPYLoginOrRegisterTextField.m */; };
+		C46580461B67CE2F00F8F521 /* LPYEssenceTopicsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C46580441B67CE2F00F8F521 /* LPYEssenceTopicsCell.m */; };
+		C46580471B67CE2F00F8F521 /* LPYEssenceTopicsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C46580451B67CE2F00F8F521 /* LPYEssenceTopicsCell.xib */; };
 		C471D06A1B5FD87400BAD5D4 /* UIImage+LPYImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C471D0671B5FD87400BAD5D4 /* UIImage+LPYImage.m */; };
 		C471D06B1B5FD87400BAD5D4 /* UIView+LPYView.m in Sources */ = {isa = PBXBuildFile; fileRef = C471D0691B5FD87400BAD5D4 /* UIView+LPYView.m */; };
 		C471D06E1B5FE3CC00BAD5D4 /* LPYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C471D06D1B5FE3CC00BAD5D4 /* LPYTabBar.m */; };
@@ -40,12 +42,15 @@
 		C493FD3A1B62A15A0046ACEB /* LPYRecommendTagsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C493FD381B62A15A0046ACEB /* LPYRecommendTagsCell.m */; };
 		C493FD3B1B62A15A0046ACEB /* LPYRecommendTagsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C493FD391B62A15A0046ACEB /* LPYRecommendTagsCell.xib */; };
 		C493FD3E1B62A1E10046ACEB /* LPYRecommendTagsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C493FD3D1B62A1E10046ACEB /* LPYRecommendTagsModel.m */; };
+		C4996A731B68EEF1005F5983 /* NSDate+LPYDate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4996A721B68EEF1005F5983 /* NSDate+LPYDate.m */; };
+		C4996A761B68F5AF005F5983 /* LPYConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C4996A751B68F5AF005F5983 /* LPYConst.m */; };
 		C4A352431B5FC033002C2E39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A352421B5FC033002C2E39 /* main.m */; };
 		C4A3524C1B5FC033002C2E39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A3524A1B5FC033002C2E39 /* Main.storyboard */; };
 		C4A3524E1B5FC033002C2E39 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A3524D1B5FC033002C2E39 /* Images.xcassets */; };
 		C4A352511B5FC034002C2E39 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4A3524F1B5FC034002C2E39 /* LaunchScreen.xib */; };
 		C4A3525D1B5FC034002C2E39 /* BSBDJProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A3525C1B5FC034002C2E39 /* BSBDJProjectTests.m */; };
 		C4A352811B5FC31D002C2E39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A352791B5FC31D002C2E39 /* AppDelegate.m */; };
+		C4A3FCB61B67B19E004619CE /* LPYEssenceTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A3FCB51B67B19E004619CE /* LPYEssenceTopicModel.m */; };
 		C4B418411B5FC9090096569F /* LPYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B418401B5FC9090096569F /* LPYTabBarController.m */; };
 		EEE5B0EA237381D34B5E7387 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC99A7803F0A4CA7B272A99A /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -74,6 +79,9 @@
 		C440BB1A1B650267008A026D /* LPYContentVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYContentVerticalButton.m; sourceTree = "<group>"; };
 		C440BB1C1B651128008A026D /* LPYLoginOrRegisterTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYLoginOrRegisterTextField.h; sourceTree = "<group>"; };
 		C440BB1D1B651128008A026D /* LPYLoginOrRegisterTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYLoginOrRegisterTextField.m; sourceTree = "<group>"; };
+		C46580431B67CE2F00F8F521 /* LPYEssenceTopicsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYEssenceTopicsCell.h; sourceTree = "<group>"; };
+		C46580441B67CE2F00F8F521 /* LPYEssenceTopicsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYEssenceTopicsCell.m; sourceTree = "<group>"; };
+		C46580451B67CE2F00F8F521 /* LPYEssenceTopicsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPYEssenceTopicsCell.xib; sourceTree = "<group>"; };
 		C471D0651B5FD6C400BAD5D4 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		C471D0661B5FD87400BAD5D4 /* UIImage+LPYImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LPYImage.h"; sourceTree = "<group>"; };
 		C471D0671B5FD87400BAD5D4 /* UIImage+LPYImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LPYImage.m"; sourceTree = "<group>"; };
@@ -124,6 +132,10 @@
 		C493FD391B62A15A0046ACEB /* LPYRecommendTagsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPYRecommendTagsCell.xib; sourceTree = "<group>"; };
 		C493FD3C1B62A1E10046ACEB /* LPYRecommendTagsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYRecommendTagsModel.h; sourceTree = "<group>"; };
 		C493FD3D1B62A1E10046ACEB /* LPYRecommendTagsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYRecommendTagsModel.m; sourceTree = "<group>"; };
+		C4996A711B68EEF1005F5983 /* NSDate+LPYDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+LPYDate.h"; sourceTree = "<group>"; };
+		C4996A721B68EEF1005F5983 /* NSDate+LPYDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+LPYDate.m"; sourceTree = "<group>"; };
+		C4996A741B68F5AF005F5983 /* LPYConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYConst.h; sourceTree = "<group>"; };
+		C4996A751B68F5AF005F5983 /* LPYConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYConst.m; sourceTree = "<group>"; };
 		C4A3523D1B5FC033002C2E39 /* BSBDJProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BSBDJProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A352411B5FC033002C2E39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4A352421B5FC033002C2E39 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -135,6 +147,8 @@
 		C4A3525C1B5FC034002C2E39 /* BSBDJProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSBDJProjectTests.m; sourceTree = "<group>"; };
 		C4A352781B5FC31D002C2E39 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C4A352791B5FC31D002C2E39 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C4A3FCB41B67B19E004619CE /* LPYEssenceTopicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYEssenceTopicModel.h; sourceTree = "<group>"; };
+		C4A3FCB51B67B19E004619CE /* LPYEssenceTopicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYEssenceTopicModel.m; sourceTree = "<group>"; };
 		C4B4183F1B5FC9090096569F /* LPYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYTabBarController.h; sourceTree = "<group>"; };
 		C4B418401B5FC9090096569F /* LPYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -184,6 +198,8 @@
 				C471D0691B5FD87400BAD5D4 /* UIView+LPYView.m */,
 				C471D0831B5FF41000BAD5D4 /* UIBarButtonItem+LPYBarButtonItem.h */,
 				C471D0841B5FF41000BAD5D4 /* UIBarButtonItem+LPYBarButtonItem.m */,
+				C4996A711B68EEF1005F5983 /* NSDate+LPYDate.h */,
+				C4996A721B68EEF1005F5983 /* NSDate+LPYDate.m */,
 			);
 			path = Catagory;
 			sourceTree = "<group>";
@@ -296,6 +312,8 @@
 			children = (
 				C493FD3C1B62A1E10046ACEB /* LPYRecommendTagsModel.h */,
 				C493FD3D1B62A1E10046ACEB /* LPYRecommendTagsModel.m */,
+				C4A3FCB41B67B19E004619CE /* LPYEssenceTopicModel.h */,
+				C4A3FCB51B67B19E004619CE /* LPYEssenceTopicModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -306,6 +324,9 @@
 				C493FD371B62A15A0046ACEB /* LPYRecommendTagsCell.h */,
 				C493FD381B62A15A0046ACEB /* LPYRecommendTagsCell.m */,
 				C493FD391B62A15A0046ACEB /* LPYRecommendTagsCell.xib */,
+				C46580431B67CE2F00F8F521 /* LPYEssenceTopicsCell.h */,
+				C46580441B67CE2F00F8F521 /* LPYEssenceTopicsCell.m */,
+				C46580451B67CE2F00F8F521 /* LPYEssenceTopicsCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -438,6 +459,8 @@
 				C4A0FF821B5FCB5B0083FCD5 /* Catagory */,
 				C4A3527B1B5FC31D002C2E39 /* View */,
 				C4A3527C1B5FC31D002C2E39 /* ViewController */,
+				C4996A741B68F5AF005F5983 /* LPYConst.h */,
+				C4996A751B68F5AF005F5983 /* LPYConst.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -585,6 +608,7 @@
 				C4A352511B5FC034002C2E39 /* LaunchScreen.xib in Resources */,
 				C471D08A1B5FFB1900BAD5D4 /* LPYRecommendViewController.xib in Resources */,
 				C4809BAE1B61D59700E60BCF /* LPYCategoryCell.xib in Resources */,
+				C46580471B67CE2F00F8F521 /* LPYEssenceTopicsCell.xib in Resources */,
 				C471D0791B5FECE400BAD5D4 /* LPYFriendTrendsViewController.xib in Resources */,
 				C4A3524E1B5FC033002C2E39 /* Images.xcassets in Resources */,
 				C493FD3B1B62A15A0046ACEB /* LPYRecommendTagsCell.xib in Resources */,
@@ -639,6 +663,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C46580461B67CE2F00F8F521 /* LPYEssenceTopicsCell.m in Sources */,
 				C471D07C1B5FF14300BAD5D4 /* LPYEssenceViewController.m in Sources */,
 				C493FD3E1B62A1E10046ACEB /* LPYRecommendTagsModel.m in Sources */,
 				C4A352811B5FC31D002C2E39 /* AppDelegate.m in Sources */,
@@ -652,6 +677,7 @@
 				C4809BB11B61D61B00E60BCF /* LPYCategoryModel.m in Sources */,
 				C471D06B1B5FD87400BAD5D4 /* UIView+LPYView.m in Sources */,
 				C4A352431B5FC033002C2E39 /* main.m in Sources */,
+				C4996A731B68EEF1005F5983 /* NSDate+LPYDate.m in Sources */,
 				C48DC53E1B65487A0018C568 /* LPYEssenceVedioViewController.m in Sources */,
 				C493FD3A1B62A15A0046ACEB /* LPYRecommendTagsCell.m in Sources */,
 				C4809BB91B61F8DB00E60BCF /* LPYRecommendUserModel.m in Sources */,
@@ -665,6 +691,8 @@
 				C4809BB51B61E73200E60BCF /* LPYUserCell.m in Sources */,
 				C440BB1B1B650267008A026D /* LPYContentVerticalButton.m in Sources */,
 				C471D0821B5FF16E00BAD5D4 /* LPYMeViewController.m in Sources */,
+				C4A3FCB61B67B19E004619CE /* LPYEssenceTopicModel.m in Sources */,
+				C4996A761B68F5AF005F5983 /* LPYConst.m in Sources */,
 				C471D0851B5FF41000BAD5D4 /* UIBarButtonItem+LPYBarButtonItem.m in Sources */,
 				C440BB121B64F3D7008A026D /* LPYLoginOrRegisterViewController.m in Sources */,
 				C471D0891B5FFB1900BAD5D4 /* LPYRecommendViewController.m in Sources */,

@@ -25,6 +25,8 @@
 /** titleView */
 @property (nonatomic,weak) UIView *titleView;
 
+/** contentScrollView */
+@property (nonatomic,strong) UIScrollView *contentScrollView;
 
 @end
 
@@ -46,11 +48,12 @@
     // 添加子控制器
     [self addAllChildViewController];
     
+    // 添加内容
+    [self addContentView];
+    
     // 添加标题
     [self addTitleView];
     
-    // 添加内容
-    [self addContentView];
 }
 
 // 添加标题View
@@ -75,6 +78,8 @@
         btn.y = 0;
         btn.width = btnW;
         btn.height = titleView.height;
+        // 避免跟系统控件的tag冲突
+        btn.tag = i + 1;
         [btn setTitle:[self.childViewControllers[i] title] forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor redColor] forState:UIControlStateDisabled];
@@ -86,6 +91,9 @@
         {
             [btn layoutIfNeeded];
             selectedView.frame = CGRectMake((btn.width - btn.titleLabel.width) * 0.5, titleView.height - selectedViewH, btn.titleLabel.width, selectedViewH);
+            
+            // 添加第一个控制器内容
+            [self scrollViewDidEndDecelerating:self.contentScrollView];
         }
     }
     
@@ -100,9 +108,11 @@
     UIScrollView *contentView = [[UIScrollView alloc] init];
     contentView.backgroundColor = [UIColor yellowColor];
     contentView.frame = CGRectMake(0, 0, self.view.width, self.view.height);
-    contentView.contentSize = CGSizeMake(self.view.width * (self.titleView.subviews.count - 1), 0);
     contentView.delegate = self;
+    contentView.pagingEnabled = YES;
     [self.view insertSubview:contentView atIndex:0];
+    contentView.contentSize = CGSizeMake(self.view.width * (self.titleView.subviews.count - 1), 0);
+    self.contentScrollView = contentView;
 }
 
 - (void)addAllChildViewController
@@ -135,18 +145,35 @@
     sender.enabled = NO;
     
     [UIView animateWithDuration:0.25 animations:^{
-        self.selectedView.width = sender.titleLabel.width;
-        self.selectedView.centerX = sender.centerX;
+        self.selectedView.width = self.btnSelect.titleLabel.width;
+        self.selectedView.centerX = self.btnSelect.centerX;
     }];
     
     // 添加内容
-    
+    [self.contentScrollView setContentOffset:CGPointMake((self.btnSelect.tag - 1) * self.view.width, 0) animated:YES];
 }
 
-// scrollView 减速完成
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+{
+    CGFloat viewW = self.view.width;
+    CGFloat viewH = self.view.height;
+    NSInteger index = (NSInteger)(scrollView.contentOffset.x / viewW);
+    UITableViewController *viewController = self.childViewControllers[index];
+    viewController.view.frame = CGRectMake(scrollView.contentOffset.x, 0, viewW, viewH);
+    CGFloat top = CGRectGetMaxY(self.titleView.frame);
+    CGFloat bottom = self.tabBarController.tabBar.height;
+    viewController.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
+    [scrollView addSubview:viewController.view];
+}
+
+// 拖拽结束
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    
+    [self scrollViewDidEndScrollingAnimation:scrollView];
+    CGFloat viewW = self.view.width;
+    NSInteger index = (NSInteger)(scrollView.contentOffset.x / viewW);
+    UIButton *btn = (UIButton *)[self.titleView viewWithTag:index + 1] ;
+    [self btnTitleClick:btn];
 }
 
 - (void)setUpNav

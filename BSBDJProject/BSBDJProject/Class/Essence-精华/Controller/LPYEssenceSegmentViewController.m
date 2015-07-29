@@ -7,22 +7,126 @@
 //
 
 #import "LPYEssenceSegmentViewController.h"
+#import "LPYEssenceTopicModel.h"
+#import <AFNetworking.h>
+#import <MJExtension.h>
+#import <MJRefresh.h>
+#import "LPYEssenceTopicsCell.h"
 
 @interface LPYEssenceSegmentViewController ()
+/** topics */
+@property (nonatomic,strong) NSMutableArray *essenceTopics;
 
+/** params */
+@property (nonatomic,strong) NSMutableDictionary *params;
+
+@property (nonatomic,copy) NSString *maxtime;
 @end
 
 @implementation LPYEssenceSegmentViewController
+- (NSMutableArray *)essenceTopics
+{
+    if(_essenceTopics == nil)
+    {
+        _essenceTopics = [NSMutableArray array];
+    }
+    
+    return _essenceTopics;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    // 背景色
+    LPYBackgroundColor;
+    [self setupTableView];
 }
+
+static NSString * const essenceTopicsCell = @"essenceTopicsCell";
+
+// 数据刷新
+- (void)setupTableView
+{
+    self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadHeaderData)];
+    // 开始刷新
+    // 自动改变透明度
+    self.tableView.header.autoChangeAlpha = YES;
+    [self.tableView.header beginRefreshing];
+    
+    self.tableView.footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadFooterData)];
+    self.tableView.footer.hidden = YES;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    // 注册Cell
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LPYEssenceTopicsCell class]) bundle:nil] forCellReuseIdentifier:essenceTopicsCell];
+}
+
+// 加载头部数据
+- (void)loadHeaderData
+{
+    AFHTTPSessionManager *httpSessionManger = [AFHTTPSessionManager manager];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"] = @"list";
+    params[@"c"] = @"data";
+    
+    self.params = params;
+    
+    [httpSessionManger GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+        if(self.params != params)
+            return ;
+        // 清空缓存数据
+        [self.essenceTopics removeAllObjects];
+        
+        [self.essenceTopics addObjectsFromArray:[LPYEssenceTopicModel objectArrayWithKeyValuesArray:responseObject[@"list"]]];
+        self.maxtime = responseObject[@"info"][@"maxtime"];
+        
+        // 刷新表格
+        [self.tableView reloadData];
+        
+        // 结束刷新
+        [self.tableView.header endRefreshing];
+        
+        self.tableView.footer.hidden = self.essenceTopics.count <= 0;
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        // 结束刷新
+        [self.tableView.header endRefreshing];
+    }];
+}
+
+// 加载尾部数据
+- (void)loadFooterData
+{
+    AFHTTPSessionManager *httpSessionManger = [AFHTTPSessionManager manager];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"] = @"list";
+    params[@"c"] = @"data";
+    params[@"maxtime"] = self.maxtime;
+    
+    self.params = params;
+    
+    [httpSessionManger GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+        if(self.params != params)
+            return ;
+        
+        // 保存数据
+        [self.essenceTopics addObjectsFromArray:[LPYEssenceTopicModel objectArrayWithKeyValuesArray:responseObject[@"list"]]];
+        self.maxtime = responseObject[@"info"][@"maxtime"];
+        
+        // 刷新表格
+        [self.tableView reloadData];
+        
+        // 结束刷新
+        [self.tableView.footer endRefreshing];
+        
+        self.tableView.footer.hidden = self.essenceTopics.count <= 0;
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        // 结束刷新
+        [self.tableView.footer endRefreshing];
+    }];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -32,59 +136,17 @@
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.essenceTopics.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"segement" forIndexPath:indexPath];
-    
-    cell.textLabel.text = @"---------";
-    
+    LPYEssenceTopicsCell *cell = [tableView dequeueReusableCellWithIdentifier:essenceTopicsCell];
+    cell.essenceTopicModel = self.essenceTopics[indexPath.row];
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 200;
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

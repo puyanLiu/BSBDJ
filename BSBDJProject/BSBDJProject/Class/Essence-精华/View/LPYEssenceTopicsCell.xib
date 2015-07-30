@@ -197,17 +197,21 @@
                             </mask>
                         </variation>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUz-J7-5gl" userLabel="topicContent">
-                        <rect key="frame" x="12" y="63" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUz-J7-5gl" userLabel="topicContent">
+                        <rect key="frame" x="10" y="55" width="300" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="H6w-OO-5G0" firstAttribute="leading" secondItem="NUz-J7-5gl" secondAttribute="leading" id="CRG-cV-nFi"/>
                     <constraint firstAttribute="bottom" secondItem="EZQ-YF-LMK" secondAttribute="bottom" id="Dak-Yf-KnT"/>
                     <constraint firstAttribute="trailing" secondItem="EZQ-YF-LMK" secondAttribute="trailing" id="FBR-ht-0JW"/>
                     <constraint firstItem="EZQ-YF-LMK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="LPf-cw-G22"/>
+                    <constraint firstItem="5Lm-2p-60u" firstAttribute="trailing" secondItem="NUz-J7-5gl" secondAttribute="trailing" id="RFc-dG-lea"/>
+                    <constraint firstItem="NUz-J7-5gl" firstAttribute="top" secondItem="jaL-Cd-xcA" secondAttribute="bottom" id="eaj-vF-nQU"/>
                     <constraint firstAttribute="trailing" secondItem="jaL-Cd-xcA" secondAttribute="trailing" id="hti-lw-p6G"/>
                     <constraint firstItem="jaL-Cd-xcA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="i9P-St-llw"/>
                     <constraint firstItem="jaL-Cd-xcA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="z63-Pv-E9x"/>
@@ -219,6 +223,7 @@
                 <outlet property="btnDing" destination="8Px-Qd-Jxk" id="ra5-gl-2Yd"/>
                 <outlet property="btnShare" destination="maW-4b-67U" id="jXp-m7-4Cy"/>
                 <outlet property="lblCreateTime" destination="7av-te-iHg" id="kDa-t3-yjV"/>
+                <outlet property="lblText" destination="NUz-J7-5gl" id="yG6-LA-8TF"/>
                 <outlet property="lblUserName" destination="QJC-T9-f2E" id="AFu-iN-a3l"/>
                 <outlet property="photoIcon" destination="H6w-OO-5G0" id="m7U-EC-N5b"/>
                 <outlet property="sina_vIcon" destination="dp0-El-tud" id="BnW-H4-Wfp"/>

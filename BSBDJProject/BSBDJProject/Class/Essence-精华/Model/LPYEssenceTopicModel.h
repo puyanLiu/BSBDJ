@@ -44,4 +44,33 @@
 
 /** maxtime */
 @property (nonatomic,strong) NSString *maxtime;
+
+/** 图片宽度 */
+@property (nonatomic,assign) CGFloat width;
+
+/** 图片高度 */
+@property (nonatomic,assign) CGFloat height;
+
+/**  */
+@property (nonatomic,copy) NSString *image_small;
+
+/** 宽度240 */
+@property (nonatomic,copy) NSString *pic_small;
+
+/** 中等图片 */
+@property (nonatomic,copy) NSString *pic_middle;
+
+/** 大图 */
+@property (nonatomic,copy) NSString *pic_large;
+
+
+/**   辅助属性 */
+/** cellHeight */
+@property (nonatomic,assign,readonly) CGFloat cellHeight;
+/** picture Frame */
+@property (nonatomic,assign,readonly) CGRect pictureFrame;
+/** 是否长图 */
+@property (nonatomic,assign,readonly,getter=isLargePicture) BOOL largePicture;
+/** 图片超出后，图片的真实高度 */
+@property (nonatomic,assign,readonly) CGFloat pictureRealHeight;
 @end

@@ -6,14 +6,15 @@
 //  Copyright (c) 2015年 liupuyan. All rights reserved.
 //
 
-#import "LPYEssenceSegmentViewController.h"
+#import "LPYEssenceTopicViewController.h"
 #import "LPYEssenceTopicModel.h"
 #import <AFNetworking.h>
 #import <MJExtension.h>
 #import <MJRefresh.h>
+#import <SVProgressHUD.h>
 #import "LPYEssenceTopicsCell.h"
 
-@interface LPYEssenceSegmentViewController ()
+@interface LPYEssenceTopicViewController ()
 /** topics */
 @property (nonatomic,strong) NSMutableArray *essenceTopics;
 
@@ -23,7 +24,7 @@
 @property (nonatomic,copy) NSString *maxtime;
 @end
 
-@implementation LPYEssenceSegmentViewController
+@implementation LPYEssenceTopicViewController
 - (NSMutableArray *)essenceTopics
 {
     if(_essenceTopics == nil)
@@ -40,6 +41,10 @@
     // 背景色
     LPYBackgroundColor;
     [self setupTableView];
+
+    CGFloat top = LPYEssenceNavigationAndStateH + LPYEssenceTitleH;
+    CGFloat bottom = LPYEssenceTabBarH;
+    self.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
 }
 
 static NSString * const essenceTopicsCell = @"essenceTopicsCell";
@@ -65,12 +70,13 @@ static NSString * const essenceTopicsCell = @"essenceTopicsCell";
 - (void)loadHeaderData
 {
     AFHTTPSessionManager *httpSessionManger = [AFHTTPSessionManager manager];
+//    httpSessionManger.requestSerializer.timeoutInterval = 10;
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
+    params[@"type"] = @(self.essenceTopicType);
     
     self.params = params;
-    
     [httpSessionManger GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
         if(self.params != params)
             return ;
@@ -89,6 +95,9 @@ static NSString * const essenceTopicsCell = @"essenceTopicsCell";
         self.tableView.footer.hidden = self.essenceTopics.count <= 0;
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        if(self.params != params)
+            return ;
+        [SVProgressHUD showErrorWithStatus:@"数据加载失败。。。。"];
         // 结束刷新
         [self.tableView.header endRefreshing];
     }];
@@ -98,9 +107,12 @@ static NSString * const essenceTopicsCell = @"essenceTopicsCell";
 - (void)loadFooterData
 {
     AFHTTPSessionManager *httpSessionManger = [AFHTTPSessionManager manager];
+//    httpSessionManger.requestSerializer.timeoutInterval = 10;
+    
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
+    params[@"type"] = @(self.essenceTopicType);
     params[@"maxtime"] = self.maxtime;
     
     self.params = params;
@@ -122,6 +134,9 @@ static NSString * const essenceTopicsCell = @"essenceTopicsCell";
         self.tableView.footer.hidden = self.essenceTopics.count <= 0;
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        if(self.params != params)
+            return ;
+        [SVProgressHUD showErrorWithStatus:@"数据加载失败"];
         // 结束刷新
         [self.tableView.footer endRefreshing];
     }];
@@ -141,12 +156,14 @@ static NSString * const essenceTopicsCell = @"essenceTopicsCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     LPYEssenceTopicsCell *cell = [tableView dequeueReusableCellWithIdentifier:essenceTopicsCell];
-    cell.essenceTopicModel = self.essenceTopics[indexPath.row];
+    LPYEssenceTopicModel *model = self.essenceTopics[indexPath.row];
+    cell.essenceTopicModel = model;
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 200;
+    LPYEssenceTopicModel *model = self.essenceTopics[indexPath.row];
+    return model.cellHeight;
 }
 @end

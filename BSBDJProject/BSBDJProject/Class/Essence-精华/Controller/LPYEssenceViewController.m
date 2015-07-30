@@ -7,12 +7,8 @@
 //
 
 #import "LPYEssenceViewController.h"
+#import "LPYEssenceTopicViewController.h"
 #import "LPYRecommendTagsController.h"
-#import "LPYEssenceAllViewController.h"
-#import "LPYEssencePictureViewController.h"
-#import "LPYEssenceSegmentViewController.h"
-#import "LPYEssenceSoundsViewController.h"
-#import "LPYEssenceVedioViewController.h"
 
 
 @interface LPYEssenceViewController () <UIScrollViewDelegate>
@@ -61,7 +57,7 @@
 {
     UIView *titleView = [[UIView alloc] init];
     titleView.backgroundColor = LPYColor(252, 252, 252);
-    titleView.frame = CGRectMake(0, 64, self.view.width, 40);
+    titleView.frame = CGRectMake(0, 64, self.view.width, LPYEssenceTitleH);
     [self.view addSubview:titleView];
     self.titleView = titleView;
     
@@ -106,7 +102,6 @@
 - (void)addContentView
 {
     UIScrollView *contentView = [[UIScrollView alloc] init];
-    contentView.backgroundColor = [UIColor yellowColor];
     contentView.frame = CGRectMake(0, 0, self.view.width, self.view.height);
     contentView.delegate = self;
     contentView.pagingEnabled = YES;
@@ -117,24 +112,29 @@
 
 - (void)addAllChildViewController
 {
-    LPYEssenceAllViewController *essenceAll = [[LPYEssenceAllViewController alloc] init];
+    LPYEssenceTopicViewController *essenceAll = [[LPYEssenceTopicViewController alloc] init];
     essenceAll.title = @"全部";
+    essenceAll.essenceTopicType = LPYEssenceTopicTypeAll;
     [self addChildViewController:essenceAll];
     
-    LPYEssenceVedioViewController *vedio = [[LPYEssenceVedioViewController alloc] init];
+    LPYEssenceTopicViewController *vedio = [[LPYEssenceTopicViewController alloc] init];
     vedio.title = @"视频";
+    vedio.essenceTopicType = LPYEssenceTopicTypeMovie;
     [self addChildViewController:vedio];
     
-    LPYEssenceSoundsViewController *sounds = [[LPYEssenceSoundsViewController alloc] init];
+    LPYEssenceTopicViewController *sounds = [[LPYEssenceTopicViewController alloc] init];
     sounds.title = @"声音";
+    sounds.essenceTopicType = LPYEssenceTopicTypeVedio;
     [self addChildViewController:sounds];
     
-    LPYEssencePictureViewController *picture = [[LPYEssencePictureViewController alloc] init];
+    LPYEssenceTopicViewController *picture = [[LPYEssenceTopicViewController alloc] init];
     picture.title = @"图片";
+    picture.essenceTopicType = LPYEssenceTopicTypePicture;
     [self addChildViewController:picture];
     
-    LPYEssenceSegmentViewController *segement = [[LPYEssenceSegmentViewController alloc] init];
+    LPYEssenceTopicViewController *segement = [[LPYEssenceTopicViewController alloc] init];
     segement.title = @"段子";
+    segement.essenceTopicType = LPYEssenceTopicTypeSegment;
     [self addChildViewController:segement];
 }
 
@@ -160,9 +160,6 @@
     NSInteger index = (NSInteger)(scrollView.contentOffset.x / viewW);
     UITableViewController *viewController = self.childViewControllers[index];
     viewController.view.frame = CGRectMake(scrollView.contentOffset.x, 0, viewW, viewH);
-    CGFloat top = CGRectGetMaxY(self.titleView.frame);
-    CGFloat bottom = self.tabBarController.tabBar.height;
-    viewController.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
     [scrollView addSubview:viewController.view];
 }
 

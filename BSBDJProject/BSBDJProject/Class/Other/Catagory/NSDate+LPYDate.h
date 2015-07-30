@@ -9,15 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface NSDate (LPYDate)
-/**
- 当前时间 一分钟内 -----刚刚
- 当前时间 一小时内 -----显示多少分钟前
- 当前时间 24小时内 -----显示多少小时前
- 昨天 -----显示昨天 时：分：秒
- 今年 -----显示月：日 时：分：秒
- 其他 -----显示年：月：日 时：分：秒
- */
-+ (NSString *)timeShow:(NSString *)strDate;
 
 // 返回时间差
 + (NSDateComponents *)deltaDate:(NSDate *)date;

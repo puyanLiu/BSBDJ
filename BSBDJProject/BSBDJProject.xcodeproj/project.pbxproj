@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4042F2D1B6A417600408F9D /* LPYEssenceTopicsPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = C4042F2C1B6A417600408F9D /* LPYEssenceTopicsPicture.m */; };
+		C4042F2F1B6A418700408F9D /* LPYEssenceTopicsPicture.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4042F2E1B6A418700408F9D /* LPYEssenceTopicsPicture.xib */; };
 		C440BB121B64F3D7008A026D /* LPYLoginOrRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C440BB101B64F3D7008A026D /* LPYLoginOrRegisterViewController.m */; };
 		C440BB131B64F3D7008A026D /* LPYLoginOrRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C440BB111B64F3D7008A026D /* LPYLoginOrRegisterViewController.xib */; };
 		C440BB161B64F475008A026D /* LPYPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = C440BB151B64F475008A026D /* LPYPushGuideView.m */; };
@@ -33,11 +35,7 @@
 		C4809BB51B61E73200E60BCF /* LPYUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4809BB31B61E73200E60BCF /* LPYUserCell.m */; };
 		C4809BB61B61E73200E60BCF /* LPYUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4809BB41B61E73200E60BCF /* LPYUserCell.xib */; };
 		C4809BB91B61F8DB00E60BCF /* LPYRecommendUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4809BB81B61F8DB00E60BCF /* LPYRecommendUserModel.m */; };
-		C48DC53B1B65484E0018C568 /* LPYEssenceAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C48DC53A1B65484E0018C568 /* LPYEssenceAllViewController.m */; };
-		C48DC53E1B65487A0018C568 /* LPYEssenceVedioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C48DC53D1B65487A0018C568 /* LPYEssenceVedioViewController.m */; };
-		C48DC5411B65488C0018C568 /* LPYEssenceSoundsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C48DC5401B65488C0018C568 /* LPYEssenceSoundsViewController.m */; };
-		C48DC5441B65489F0018C568 /* LPYEssencePictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C48DC5431B65489F0018C568 /* LPYEssencePictureViewController.m */; };
-		C48DC5471B6548D00018C568 /* LPYEssenceSegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C48DC5461B6548D00018C568 /* LPYEssenceSegmentViewController.m */; };
+		C48DC5471B6548D00018C568 /* LPYEssenceTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C48DC5461B6548D00018C568 /* LPYEssenceTopicViewController.m */; };
 		C493FD361B62A1420046ACEB /* LPYRecommendTagsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C493FD351B62A1420046ACEB /* LPYRecommendTagsController.m */; };
 		C493FD3A1B62A15A0046ACEB /* LPYRecommendTagsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C493FD381B62A15A0046ACEB /* LPYRecommendTagsCell.m */; };
 		C493FD3B1B62A15A0046ACEB /* LPYRecommendTagsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C493FD391B62A15A0046ACEB /* LPYRecommendTagsCell.xib */; };
@@ -69,6 +67,9 @@
 		227593505CE3E523499F3A55 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AC99A7803F0A4CA7B272A99A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFF9F8E5BC9AF9776052203D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		C4042F2B1B6A417600408F9D /* LPYEssenceTopicsPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYEssenceTopicsPicture.h; sourceTree = "<group>"; };
+		C4042F2C1B6A417600408F9D /* LPYEssenceTopicsPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYEssenceTopicsPicture.m; sourceTree = "<group>"; };
+		C4042F2E1B6A418700408F9D /* LPYEssenceTopicsPicture.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPYEssenceTopicsPicture.xib; sourceTree = "<group>"; };
 		C440BB0F1B64F3D7008A026D /* LPYLoginOrRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYLoginOrRegisterViewController.h; sourceTree = "<group>"; };
 		C440BB101B64F3D7008A026D /* LPYLoginOrRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYLoginOrRegisterViewController.m; sourceTree = "<group>"; };
 		C440BB111B64F3D7008A026D /* LPYLoginOrRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPYLoginOrRegisterViewController.xib; sourceTree = "<group>"; };
@@ -115,16 +116,8 @@
 		C4809BB41B61E73200E60BCF /* LPYUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPYUserCell.xib; sourceTree = "<group>"; };
 		C4809BB71B61F8DB00E60BCF /* LPYRecommendUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYRecommendUserModel.h; sourceTree = "<group>"; };
 		C4809BB81B61F8DB00E60BCF /* LPYRecommendUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYRecommendUserModel.m; sourceTree = "<group>"; };
-		C48DC5391B65484E0018C568 /* LPYEssenceAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYEssenceAllViewController.h; sourceTree = "<group>"; };
-		C48DC53A1B65484E0018C568 /* LPYEssenceAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYEssenceAllViewController.m; sourceTree = "<group>"; };
-		C48DC53C1B65487A0018C568 /* LPYEssenceVedioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYEssenceVedioViewController.h; sourceTree = "<group>"; };
-		C48DC53D1B65487A0018C568 /* LPYEssenceVedioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYEssenceVedioViewController.m; sourceTree = "<group>"; };
-		C48DC53F1B65488C0018C568 /* LPYEssenceSoundsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYEssenceSoundsViewController.h; sourceTree = "<group>"; };
-		C48DC5401B65488C0018C568 /* LPYEssenceSoundsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYEssenceSoundsViewController.m; sourceTree = "<group>"; };
-		C48DC5421B65489F0018C568 /* LPYEssencePictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYEssencePictureViewController.h; sourceTree = "<group>"; };
-		C48DC5431B65489F0018C568 /* LPYEssencePictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYEssencePictureViewController.m; sourceTree = "<group>"; };
-		C48DC5451B6548D00018C568 /* LPYEssenceSegmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYEssenceSegmentViewController.h; sourceTree = "<group>"; };
-		C48DC5461B6548D00018C568 /* LPYEssenceSegmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYEssenceSegmentViewController.m; sourceTree = "<group>"; };
+		C48DC5451B6548D00018C568 /* LPYEssenceTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYEssenceTopicViewController.h; sourceTree = "<group>"; };
+		C48DC5461B6548D00018C568 /* LPYEssenceTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYEssenceTopicViewController.m; sourceTree = "<group>"; };
 		C493FD341B62A1420046ACEB /* LPYRecommendTagsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYRecommendTagsController.h; sourceTree = "<group>"; };
 		C493FD351B62A1420046ACEB /* LPYRecommendTagsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYRecommendTagsController.m; sourceTree = "<group>"; };
 		C493FD371B62A15A0046ACEB /* LPYRecommendTagsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYRecommendTagsCell.h; sourceTree = "<group>"; };
@@ -289,20 +282,12 @@
 		C4A352681B5FC31D002C2E39 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C471D07A1B5FF14300BAD5D4 /* LPYEssenceViewController.h */,
-				C471D07B1B5FF14300BAD5D4 /* LPYEssenceViewController.m */,
 				C493FD341B62A1420046ACEB /* LPYRecommendTagsController.h */,
 				C493FD351B62A1420046ACEB /* LPYRecommendTagsController.m */,
-				C48DC5391B65484E0018C568 /* LPYEssenceAllViewController.h */,
-				C48DC53A1B65484E0018C568 /* LPYEssenceAllViewController.m */,
-				C48DC53C1B65487A0018C568 /* LPYEssenceVedioViewController.h */,
-				C48DC53D1B65487A0018C568 /* LPYEssenceVedioViewController.m */,
-				C48DC53F1B65488C0018C568 /* LPYEssenceSoundsViewController.h */,
-				C48DC5401B65488C0018C568 /* LPYEssenceSoundsViewController.m */,
-				C48DC5421B65489F0018C568 /* LPYEssencePictureViewController.h */,
-				C48DC5431B65489F0018C568 /* LPYEssencePictureViewController.m */,
-				C48DC5451B6548D00018C568 /* LPYEssenceSegmentViewController.h */,
-				C48DC5461B6548D00018C568 /* LPYEssenceSegmentViewController.m */,
+				C471D07A1B5FF14300BAD5D4 /* LPYEssenceViewController.h */,
+				C471D07B1B5FF14300BAD5D4 /* LPYEssenceViewController.m */,
+				C48DC5451B6548D00018C568 /* LPYEssenceTopicViewController.h */,
+				C48DC5461B6548D00018C568 /* LPYEssenceTopicViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -327,6 +312,9 @@
 				C46580431B67CE2F00F8F521 /* LPYEssenceTopicsCell.h */,
 				C46580441B67CE2F00F8F521 /* LPYEssenceTopicsCell.m */,
 				C46580451B67CE2F00F8F521 /* LPYEssenceTopicsCell.xib */,
+				C4042F2B1B6A417600408F9D /* LPYEssenceTopicsPicture.h */,
+				C4042F2C1B6A417600408F9D /* LPYEssenceTopicsPicture.m */,
+				C4042F2E1B6A418700408F9D /* LPYEssenceTopicsPicture.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -456,11 +444,11 @@
 			children = (
 				C4A352781B5FC31D002C2E39 /* AppDelegate.h */,
 				C4A352791B5FC31D002C2E39 /* AppDelegate.m */,
+				C4996A741B68F5AF005F5983 /* LPYConst.h */,
+				C4996A751B68F5AF005F5983 /* LPYConst.m */,
 				C4A0FF821B5FCB5B0083FCD5 /* Catagory */,
 				C4A3527B1B5FC31D002C2E39 /* View */,
 				C4A3527C1B5FC31D002C2E39 /* ViewController */,
-				C4996A741B68F5AF005F5983 /* LPYConst.h */,
-				C4996A751B68F5AF005F5983 /* LPYConst.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -607,6 +595,7 @@
 				C4A3524C1B5FC033002C2E39 /* Main.storyboard in Resources */,
 				C4A352511B5FC034002C2E39 /* LaunchScreen.xib in Resources */,
 				C471D08A1B5FFB1900BAD5D4 /* LPYRecommendViewController.xib in Resources */,
+				C4042F2F1B6A418700408F9D /* LPYEssenceTopicsPicture.xib in Resources */,
 				C4809BAE1B61D59700E60BCF /* LPYCategoryCell.xib in Resources */,
 				C46580471B67CE2F00F8F521 /* LPYEssenceTopicsCell.xib in Resources */,
 				C471D0791B5FECE400BAD5D4 /* LPYFriendTrendsViewController.xib in Resources */,
@@ -668,9 +657,6 @@
 				C493FD3E1B62A1E10046ACEB /* LPYRecommendTagsModel.m in Sources */,
 				C4A352811B5FC31D002C2E39 /* AppDelegate.m in Sources */,
 				C471D06E1B5FE3CC00BAD5D4 /* LPYTabBar.m in Sources */,
-				C48DC53B1B65484E0018C568 /* LPYEssenceAllViewController.m in Sources */,
-				C48DC5411B65488C0018C568 /* LPYEssenceSoundsViewController.m in Sources */,
-				C48DC5441B65489F0018C568 /* LPYEssencePictureViewController.m in Sources */,
 				C471D07F1B5FF15900BAD5D4 /* LPYNewViewController.m in Sources */,
 				C440BB1E1B651128008A026D /* LPYLoginOrRegisterTextField.m in Sources */,
 				C471D0711B5FE9D300BAD5D4 /* LPYNavigationController.m in Sources */,
@@ -678,15 +664,15 @@
 				C471D06B1B5FD87400BAD5D4 /* UIView+LPYView.m in Sources */,
 				C4A352431B5FC033002C2E39 /* main.m in Sources */,
 				C4996A731B68EEF1005F5983 /* NSDate+LPYDate.m in Sources */,
-				C48DC53E1B65487A0018C568 /* LPYEssenceVedioViewController.m in Sources */,
 				C493FD3A1B62A15A0046ACEB /* LPYRecommendTagsCell.m in Sources */,
 				C4809BB91B61F8DB00E60BCF /* LPYRecommendUserModel.m in Sources */,
 				C493FD361B62A1420046ACEB /* LPYRecommendTagsController.m in Sources */,
+				C4042F2D1B6A417600408F9D /* LPYEssenceTopicsPicture.m in Sources */,
 				C4809BAD1B61D59700E60BCF /* LPYCategoryCell.m in Sources */,
 				C440BB161B64F475008A026D /* LPYPushGuideView.m in Sources */,
 				C4B418411B5FC9090096569F /* LPYTabBarController.m in Sources */,
 				C471D0781B5FECE400BAD5D4 /* LPYFriendTrendsViewController.m in Sources */,
-				C48DC5471B6548D00018C568 /* LPYEssenceSegmentViewController.m in Sources */,
+				C48DC5471B6548D00018C568 /* LPYEssenceTopicViewController.m in Sources */,
 				C471D06A1B5FD87400BAD5D4 /* UIImage+LPYImage.m in Sources */,
 				C4809BB51B61E73200E60BCF /* LPYUserCell.m in Sources */,
 				C440BB1B1B650267008A026D /* LPYContentVerticalButton.m in Sources */,

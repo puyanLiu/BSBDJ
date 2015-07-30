@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LPYEssenceSegmentViewController : UITableViewController
-
+@interface LPYEssenceTopicViewController : UITableViewController
+/** 帖子类型 */
+@property (nonatomic,assign) LPYEssenceTopicType essenceTopicType;
 @end

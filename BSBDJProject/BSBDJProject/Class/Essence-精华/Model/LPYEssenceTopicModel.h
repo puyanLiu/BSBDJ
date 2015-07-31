@@ -73,4 +73,6 @@
 @property (nonatomic,assign,readonly,getter=isLargePicture) BOOL largePicture;
 /** 图片超出后，图片的真实高度 */
 @property (nonatomic,assign,readonly) CGFloat pictureRealHeight;
+/** 图片下载进度值 */
+@property (nonatomic,assign) CGFloat pictureProgress;
 @end

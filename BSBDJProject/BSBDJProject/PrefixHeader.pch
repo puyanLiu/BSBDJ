@@ -28,6 +28,7 @@
 
 // 屏幕宽度
 #define LPYScreenWidth [UIScreen mainScreen].bounds.size.width
+#define LPYScreenHeight [UIScreen mainScreen].bounds.size.height
 
 #import "UIImage+LPYImage.h"
 #import "UIView+LPYView.h"

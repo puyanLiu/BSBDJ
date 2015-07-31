@@ -10,6 +10,12 @@
             <rect key="frame" x="0.0" y="-2" width="354" height="213"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Hj5-rq-xCI">
+                    <rect key="frame" x="0.0" y="10" width="354" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="u3R-XH-wub"/>
+                    </constraints>
+                </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YZW-Uk-3lO">
                     <rect key="frame" x="0.0" y="0.0" width="354" height="213"/>
                 </imageView>
@@ -36,15 +42,32 @@
                             <exclude reference="bE4-WV-9mM"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="btnPictureImage" destination="iN0-l3-epB" eventType="touchUpInside" id="0hj-PD-C9V"/>
+                    </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbC-9K-KlE" customClass="LPYLabeledCircularProgressView">
+                    <rect key="frame" x="127" y="57" width="100" height="100"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="dCE-an-276"/>
+                        <constraint firstAttribute="width" constant="100" id="vlw-Ra-QQU"/>
+                    </constraints>
+                </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="YZW-Uk-3lO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2tx-kG-9bq"/>
+                <constraint firstAttribute="trailing" secondItem="Hj5-rq-xCI" secondAttribute="trailing" id="5Z4-4E-fqL"/>
+                <constraint firstItem="Hj5-rq-xCI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9LK-XR-BVa"/>
                 <constraint firstItem="Oce-9p-Qye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9Lr-8g-A21"/>
                 <constraint firstAttribute="bottom" secondItem="9PQ-VK-qft" secondAttribute="bottom" id="PYl-aJ-dJI"/>
                 <constraint firstAttribute="trailing" secondItem="YZW-Uk-3lO" secondAttribute="trailing" id="RWv-UE-P5i"/>
                 <constraint firstItem="Oce-9p-Qye" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Y0d-Xt-Xas"/>
+                <constraint firstItem="Hj5-rq-xCI" firstAttribute="leading" secondItem="Oce-9p-Qye" secondAttribute="trailing" id="bmU-wD-as4"/>
+                <constraint firstAttribute="centerY" secondItem="cbC-9K-KlE" secondAttribute="centerY" id="cm6-UI-35w"/>
+                <constraint firstItem="Hj5-rq-xCI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="dej-cH-6i3"/>
+                <constraint firstAttribute="centerX" secondItem="cbC-9K-KlE" secondAttribute="centerX" id="mS2-Na-7y9"/>
                 <constraint firstItem="9PQ-VK-qft" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="n1W-og-N0K"/>
                 <constraint firstItem="YZW-Uk-3lO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="sK1-U3-mrC"/>
                 <constraint firstAttribute="centerX" secondItem="9PQ-VK-qft" secondAttribute="centerX" id="uTn-z0-kid"/>
@@ -55,11 +78,13 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <variation key="default">
                 <mask key="constraints">
+                    <exclude reference="bmU-wD-as4"/>
                     <exclude reference="uTn-z0-kid"/>
                 </mask>
             </variation>
             <connections>
                 <outlet property="btnSeeLargeImage" destination="9PQ-VK-qft" id="Iyo-pg-3qB"/>
+                <outlet property="circluarProgressView" destination="cbC-9K-KlE" id="XLP-qD-KcL"/>
                 <outlet property="gifFlagImage" destination="Oce-9p-Qye" id="uhM-OK-1Qx"/>
                 <outlet property="pictureImage" destination="YZW-Uk-3lO" id="ghS-7q-yTk"/>
             </connections>
@@ -68,6 +93,7 @@
     </objects>
     <resources>
         <image name="common-gif" width="31" height="31"/>
+        <image name="imageBackground" width="75" height="15"/>
         <image name="see-big-picture" width="19" height="19"/>
         <image name="see-big-picture-background" width="285" height="43"/>
     </resources>

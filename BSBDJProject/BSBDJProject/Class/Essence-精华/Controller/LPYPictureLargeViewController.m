@@ -29,8 +29,6 @@
         UIImageView *imageView = [[UIImageView alloc] init];
         [self.scrollView addSubview:imageView];
         imageView.userInteractionEnabled = YES;
-        // 给图片添加点击事件
-        [imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(back)]];
         _imageView = imageView;
     }
     
@@ -66,6 +64,8 @@
     self.scrollView.delegate = self;
     self.scrollView.minimumZoomScale = 1.0;
     self.scrollView.maximumZoomScale = 1.5;
+    // 给图片添加点击事件
+    [self.scrollView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(back)]];
 }
 
 // UIScrollView 缩放

@@ -53,6 +53,10 @@
 		C4A352811B5FC31D002C2E39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A352791B5FC31D002C2E39 /* AppDelegate.m */; };
 		C4A3FCB61B67B19E004619CE /* LPYEssenceTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A3FCB51B67B19E004619CE /* LPYEssenceTopicModel.m */; };
 		C4B418411B5FC9090096569F /* LPYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B418401B5FC9090096569F /* LPYTabBarController.m */; };
+		C4CB4C4B1B6B0505005695F6 /* LPYPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CB4C491B6B0505005695F6 /* LPYPublishViewController.m */; };
+		C4CB4C4C1B6B0505005695F6 /* LPYPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4CB4C4A1B6B0505005695F6 /* LPYPublishViewController.xib */; };
+		C4CB4C4F1B6B54F1005695F6 /* LPYPublishView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CB4C4E1B6B54F1005695F6 /* LPYPublishView.m */; };
+		C4CB4C511B6B5501005695F6 /* LPYPublishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4CB4C501B6B5501005695F6 /* LPYPublishView.xib */; };
 		EEE5B0EA237381D34B5E7387 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC99A7803F0A4CA7B272A99A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -152,6 +156,12 @@
 		C4A3FCB51B67B19E004619CE /* LPYEssenceTopicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYEssenceTopicModel.m; sourceTree = "<group>"; };
 		C4B4183F1B5FC9090096569F /* LPYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYTabBarController.h; sourceTree = "<group>"; };
 		C4B418401B5FC9090096569F /* LPYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYTabBarController.m; sourceTree = "<group>"; };
+		C4CB4C481B6B0505005695F6 /* LPYPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYPublishViewController.h; sourceTree = "<group>"; };
+		C4CB4C491B6B0505005695F6 /* LPYPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYPublishViewController.m; sourceTree = "<group>"; };
+		C4CB4C4A1B6B0505005695F6 /* LPYPublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPYPublishViewController.xib; sourceTree = "<group>"; };
+		C4CB4C4D1B6B54F1005695F6 /* LPYPublishView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYPublishView.h; sourceTree = "<group>"; };
+		C4CB4C4E1B6B54F1005695F6 /* LPYPublishView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYPublishView.m; sourceTree = "<group>"; };
+		C4CB4C501B6B5501005695F6 /* LPYPublishView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPYPublishView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -502,6 +512,9 @@
 		C4A3527E1B5FC31D002C2E39 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C4CB4C481B6B0505005695F6 /* LPYPublishViewController.h */,
+				C4CB4C491B6B0505005695F6 /* LPYPublishViewController.m */,
+				C4CB4C4A1B6B0505005695F6 /* LPYPublishViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -516,6 +529,9 @@
 		C4A352801B5FC31D002C2E39 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C4CB4C4D1B6B54F1005695F6 /* LPYPublishView.h */,
+				C4CB4C4E1B6B54F1005695F6 /* LPYPublishView.m */,
+				C4CB4C501B6B5501005695F6 /* LPYPublishView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -608,6 +624,7 @@
 				C4A3524C1B5FC033002C2E39 /* Main.storyboard in Resources */,
 				C4A352511B5FC034002C2E39 /* LaunchScreen.xib in Resources */,
 				C404F96D1B6A836D00BD6196 /* LPYPictureLargeViewController.xib in Resources */,
+				C4CB4C511B6B5501005695F6 /* LPYPublishView.xib in Resources */,
 				C471D08A1B5FFB1900BAD5D4 /* LPYRecommendViewController.xib in Resources */,
 				C4042F2F1B6A418700408F9D /* LPYEssenceTopicsPicture.xib in Resources */,
 				C4809BAE1B61D59700E60BCF /* LPYCategoryCell.xib in Resources */,
@@ -615,6 +632,7 @@
 				C471D0791B5FECE400BAD5D4 /* LPYFriendTrendsViewController.xib in Resources */,
 				C4A3524E1B5FC033002C2E39 /* Images.xcassets in Resources */,
 				C493FD3B1B62A15A0046ACEB /* LPYRecommendTagsCell.xib in Resources */,
+				C4CB4C4C1B6B0505005695F6 /* LPYPublishViewController.xib in Resources */,
 				C440BB181B64F503008A026D /* LPYPushGuideView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -687,8 +705,10 @@
 				C4B418411B5FC9090096569F /* LPYTabBarController.m in Sources */,
 				C471D0781B5FECE400BAD5D4 /* LPYFriendTrendsViewController.m in Sources */,
 				C48DC5471B6548D00018C568 /* LPYEssenceTopicViewController.m in Sources */,
+				C4CB4C4B1B6B0505005695F6 /* LPYPublishViewController.m in Sources */,
 				C404F96C1B6A836D00BD6196 /* LPYPictureLargeViewController.m in Sources */,
 				C471D06A1B5FD87400BAD5D4 /* UIImage+LPYImage.m in Sources */,
+				C4CB4C4F1B6B54F1005695F6 /* LPYPublishView.m in Sources */,
 				C4809BB51B61E73200E60BCF /* LPYUserCell.m in Sources */,
 				C440BB1B1B650267008A026D /* LPYContentVerticalButton.m in Sources */,
 				C471D0821B5FF16E00BAD5D4 /* LPYMeViewController.m in Sources */,

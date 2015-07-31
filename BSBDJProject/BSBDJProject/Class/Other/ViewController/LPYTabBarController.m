@@ -13,6 +13,8 @@
 #import "LPYEssenceViewController.h"
 #import "LPYMeViewController.h"
 #import "LPYNewViewController.h"
+#import "LPYPublishViewController.h"
+#import "LPYPublishView.h"
 
 @interface LPYTabBarController ()
 /**
@@ -59,11 +61,43 @@
     UIButton *publish = [UIButton buttonWithType:UIButtonTypeCustom];
     [publish setBackgroundImage:[UIImage imageRenderingModeAlwaysOriginalNamed:@"tabBar_publish_icon"] forState:UIControlStateNormal];
     [publish setBackgroundImage:[UIImage imageRenderingModeAlwaysOriginalNamed:@"tabBar_publish_click_icon"] forState:UIControlStateHighlighted];
+    [publish addTarget:self action:@selector(btnPublishClick) forControlEvents:UIControlEventTouchUpInside];
     [publish sizeToFit];
     publish.x = (self.tabBar.width - publish.width) * 0.5;
     [self.tabBar addSubview:publish];
     self.publish = publish;
     
+}
+
+UIWindow *window;
+UIWindow *window2;
+- (void)btnPublishClick
+{
+    [LPYPublishView show];
+    
+    //    LPYPublishViewController *publish = [[LPYPublishViewController alloc] init];
+    //    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:publish animated:NO completion:nil];
+    
+    // 弹出的页面 半透明效果
+    //    LPYPublishView *publishView = [LPYPublishView publishView];
+    //    publishView.frame = [UIScreen mainScreen].bounds;
+    //    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    //    [window addSubview:publishView];
+    
+    
+    // 窗口级别
+//     UIWindowLevelNormal < UIWindowLevelStatusBar < UIWindowLevelAlert
+    
+//        window = [[UIWindow alloc] init];
+//        window.frame = CGRectMake(0, 0, 375, 20);
+//        window.backgroundColor = [UIColor yellowColor];
+//        window.windowLevel = UIWindowLevelStatusBar;
+//        window.hidden = NO;
+//    
+//        window2 = [[UIWindow alloc] init];
+//        window2.frame = CGRectMake(100, 100, 100, 100);
+//        window2.backgroundColor = [UIColor redColor];
+//        window2.hidden = NO;
 }
 
 - (void)addChildViewController:(UIViewController *)childController title:(NSString *)title image:(UIImage *)image selectedImage:(UIImage *)selectedImage

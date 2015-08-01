@@ -124,7 +124,7 @@
     
     LPYEssenceTopicViewController *sounds = [[LPYEssenceTopicViewController alloc] init];
     sounds.title = @"声音";
-    sounds.essenceTopicType = LPYEssenceTopicTypeVedio;
+    sounds.essenceTopicType = LPYEssenceTopicTypeVoice;
     [self addChildViewController:sounds];
     
     LPYEssenceTopicViewController *picture = [[LPYEssenceTopicViewController alloc] init];

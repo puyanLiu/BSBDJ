@@ -61,7 +61,6 @@
     // 是否显示 点击大图查看
     self.btnSeeLargeImage.hidden = !self.essenceTopicModel.isLargePicture;
     
-    
     [self.pictureImage sd_setImageWithURL:[NSURL URLWithString:self.essenceTopicModel.pic_large] placeholderImage:nil options:SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         
         self.essenceTopicModel.pictureProgress = 1.0 * receivedSize / expectedSize;

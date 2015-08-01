@@ -63,12 +63,28 @@
 /** 大图 */
 @property (nonatomic,copy) NSString *pic_large;
 
+/** 播放次数 */
+@property (nonatomic,assign) NSInteger playcount;
+
+/** videotime */
+@property (nonatomic,assign) NSInteger voicetime;
+
+/** videotime */
+@property (nonatomic,assign) NSInteger videotime;
+
 
 /**   辅助属性 */
 /** cellHeight */
 @property (nonatomic,assign,readonly) CGFloat cellHeight;
 /** picture Frame */
 @property (nonatomic,assign,readonly) CGRect pictureFrame;
+
+/** voice Frame */
+@property (nonatomic,assign,readonly) CGRect voiceFrame;
+
+/** movie Frame */
+@property (nonatomic,assign,readonly) CGRect moiveFrame;
+
 /** 是否长图 */
 @property (nonatomic,assign,readonly,getter=isLargePicture) BOOL largePicture;
 /** 图片超出后，图片的真实高度 */

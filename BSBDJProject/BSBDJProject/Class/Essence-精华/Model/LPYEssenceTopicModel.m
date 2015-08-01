@@ -101,6 +101,18 @@
         _pictureFrame = CGRectMake(LPYEssenceTopicCellMargin, _cellHeight, cellW, picH);
         _cellHeight += picH + LPYEssenceTopicCellMargin;
     }
+    else if(self.type == LPYEssenceTopicTypeVoice)
+    {
+        CGFloat picH = cellW * self.height / self.width;
+        _voiceFrame = CGRectMake(LPYEssenceTopicCellMargin, _cellHeight, cellW, picH);
+        _cellHeight += picH + LPYEssenceTopicCellMargin * 2;
+    }
+    else if(self.type == LPYEssenceTopicTypeMovie)
+    {
+        CGFloat picH = cellW * self.height / self.width;
+        _moiveFrame = CGRectMake(LPYEssenceTopicCellMargin, _cellHeight, cellW, picH);
+        _cellHeight += picH + LPYEssenceTopicCellMargin;
+    }
     
     _cellHeight += LPYEssenceTopicCellBottomH + LPYEssenceTopicCellMargin;
     

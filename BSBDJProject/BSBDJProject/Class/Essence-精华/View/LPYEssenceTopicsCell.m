@@ -9,6 +9,8 @@
 #import "LPYEssenceTopicsCell.h"
 #import <UIImageView+WebCache.h>
 #import "LPYEssenceTopicsPicture.h"
+#import "LPYEssenceTopicsVoice.h"
+#import "LPYEssenceTopicsMoive.h"
 
 @interface LPYEssenceTopicsCell ()
 // 头像
@@ -41,6 +43,11 @@
 /** pictureView */
 @property (nonatomic,weak) LPYEssenceTopicsPicture *essenceTopicsPicture;
 
+/** voiceView */
+@property (nonatomic,weak) LPYEssenceTopicsVoice *essenceTopicsVoice;;
+
+/** movieView */
+@property (nonatomic,weak) LPYEssenceTopicsMoive *essenceTopicsMoive;
 
 @end
 
@@ -56,6 +63,29 @@
     }
     
     return _essenceTopicsPicture;
+}
+
+- (LPYEssenceTopicsVoice *)essenceTopicsVoice
+{
+    if(_essenceTopicsVoice == nil)
+    {
+        LPYEssenceTopicsVoice *voice = [LPYEssenceTopicsVoice essenceTopicsVoice];
+        [self addSubview:voice];
+        _essenceTopicsVoice = voice;
+    }
+    
+    return _essenceTopicsVoice;
+}
+
+- (LPYEssenceTopicsMoive *)essenceTopicsMoive
+{
+    if(_essenceTopicsMoive == nil)
+    {
+        LPYEssenceTopicsMoive *movie = [LPYEssenceTopicsMoive essenceTopicsMoive];
+        [self addSubview:movie];
+        _essenceTopicsMoive = movie;
+    }
+    return _essenceTopicsMoive;
 }
 
 - (void)awakeFromNib {
@@ -82,10 +112,41 @@
     // 文本内容
     self.lblText.text = self.essenceTopicModel.text;
     
-    // 图片
-    self.essenceTopicsPicture.essenceTopicModel = self.essenceTopicModel;
-    // 图片frame
-    self.essenceTopicsPicture.frame = self.essenceTopicModel.pictureFrame;
+    if(self.essenceTopicModel.type == LPYEssenceTopicTypePicture)
+    {
+        self.essenceTopicsPicture.hidden = NO;
+        self.essenceTopicsVoice.hidden = YES;
+        self.essenceTopicsMoive.hidden = YES;
+        // 图片
+        self.essenceTopicsPicture.essenceTopicModel = self.essenceTopicModel;
+        // 图片frame
+        self.essenceTopicsPicture.frame = self.essenceTopicModel.pictureFrame;
+    }
+    else if(self.essenceTopicModel.type == LPYEssenceTopicTypeMovie)
+    {
+        // 视频
+        self.essenceTopicsPicture.hidden = YES;
+        self.essenceTopicsVoice.hidden = YES;
+        self.essenceTopicsMoive.hidden = NO;
+        self.essenceTopicsMoive.essenceTopicModel = self.essenceTopicModel;
+        self.essenceTopicsMoive.frame = self.essenceTopicModel.moiveFrame;
+    }
+    else if(self.essenceTopicModel.type == LPYEssenceTopicTypeVoice)
+    {
+        // 声音
+        self.essenceTopicsPicture.hidden = YES;
+        self.essenceTopicsVoice.hidden = NO;
+        self.essenceTopicsMoive.hidden = YES;
+        self.essenceTopicsVoice.essenceTopicModel = self.essenceTopicModel;
+        self.essenceTopicsVoice.frame = self.essenceTopicModel.voiceFrame;
+    }
+    else if(self.essenceTopicModel.type == LPYEssenceTopicTypeSegment)
+    {
+        // 段子
+        self.essenceTopicsPicture.hidden = YES;
+        self.essenceTopicsVoice.hidden = YES;
+        self.essenceTopicsMoive.hidden = YES;
+    }
 }
 
 - (void)setTopicWithButton:(UIButton *)btn withCount:(NSInteger)count withTitle:(NSString *)title

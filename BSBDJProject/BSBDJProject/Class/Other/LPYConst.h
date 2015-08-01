@@ -12,7 +12,7 @@ typedef enum
     LPYEssenceTopicTypeAll = 1,
     LPYEssenceTopicTypePicture = 10,
     LPYEssenceTopicTypeSegment = 29,
-    LPYEssenceTopicTypeVedio = 31,
+    LPYEssenceTopicTypeVoice = 31,
     LPYEssenceTopicTypeMovie = 41
 } LPYEssenceTopicType;
 

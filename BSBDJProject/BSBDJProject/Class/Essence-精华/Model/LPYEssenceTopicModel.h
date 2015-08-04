@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LPYEssenceTopicUserModel.h"
+#import "LPYEssenceTopicCommentModel.h"
 
 @interface LPYEssenceTopicModel : NSObject
 /** 帖子类型 */
@@ -71,6 +73,12 @@
 
 /** videotime */
 @property (nonatomic,assign) NSInteger videotime;
+
+/** comment */
+@property (nonatomic,strong) NSArray *top_cmt;
+
+/** ID */
+@property (nonatomic,copy) NSString *ID;
 
 
 /**   辅助属性 */

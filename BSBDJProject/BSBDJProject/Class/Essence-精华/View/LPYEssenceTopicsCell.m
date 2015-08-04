@@ -11,6 +11,7 @@
 #import "LPYEssenceTopicsPicture.h"
 #import "LPYEssenceTopicsVoice.h"
 #import "LPYEssenceTopicsMoive.h"
+#import "LPYEssenceTopicCommentModel.h"
 
 @interface LPYEssenceTopicsCell ()
 // 头像
@@ -49,6 +50,12 @@
 /** movieView */
 @property (nonatomic,weak) LPYEssenceTopicsMoive *essenceTopicsMoive;
 
+/** 最热评论 */
+@property (weak, nonatomic) IBOutlet UIView *topCommentView;
+
+/**  最热评论内容 */
+@property (weak, nonatomic) IBOutlet UILabel *lblTopCommentContent;
+
 @end
 
 @implementation LPYEssenceTopicsCell
@@ -75,6 +82,11 @@
     }
     
     return _essenceTopicsVoice;
+}
+
++ (instancetype)essenceTopicsCell
+{
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] lastObject];
 }
 
 - (LPYEssenceTopicsMoive *)essenceTopicsMoive
@@ -147,6 +159,18 @@
         self.essenceTopicsVoice.hidden = YES;
         self.essenceTopicsMoive.hidden = YES;
     }
+    
+    // 最新评论
+    LPYEssenceTopicCommentModel *comment = [self.essenceTopicModel.top_cmt firstObject];
+    if(comment)
+    {
+        self.topCommentView.hidden = NO;
+        self.lblTopCommentContent.text = [NSString stringWithFormat:@"%@ : %@",comment.user.username ,comment.content];
+    }
+    else
+    {
+        self.topCommentView.hidden = YES;
+    }
 }
 
 - (void)setTopicWithButton:(UIButton *)btn withCount:(NSInteger)count withTitle:(NSString *)title
@@ -169,9 +193,15 @@
     frame.origin.x = LPYEssenceTopicCellMargin;
     frame.origin.y += LPYEssenceTopicCellMargin;
     frame.size.width -= LPYEssenceTopicCellMargin * 2;
-    frame.size.height -= LPYEssenceTopicCellMargin;
+    frame.size.height = self.essenceTopicModel.cellHeight - LPYEssenceTopicCellMargin;
     return [super setFrame:frame];
 }
+
+- (IBAction)btnOptionClick {
+    UIActionSheet *sheep = [[UIActionSheet alloc] initWithTitle:nil delegate:nil cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"收藏", @"举报", nil];
+    [sheep showInView:self];
+}
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

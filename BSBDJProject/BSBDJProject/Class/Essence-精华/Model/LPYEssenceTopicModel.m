@@ -27,9 +27,21 @@
     return @{
              @"pic_small" : @"image0",
              @"pic_middle" : @"image1",
-             @"pic_large" : @"image2"
+             @"pic_large" : @"image2",
+             @"ID" : @"id"
              };
 }
+
++ (NSDictionary *)objectClassInArray
+{
+//    return @{
+//             @"top_cmt" : @"LPYEssenceTopicCommentModel"
+//             };
+    return @{
+             @"top_cmt" : [LPYEssenceTopicCommentModel class]
+             };
+}
+
 
 /**
  当前时间 一分钟内 -----刚刚
@@ -81,7 +93,7 @@
     // 计算文本高度
     CGSize textSize = CGSizeMake(cellW, MAXFLOAT);
     // NSStringDrawingUsesLineFragmentOrigin
-    CGFloat textH = [_text boundingRectWithSize:textSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:16]} context:nil].size.height;
+    CGFloat textH = [_text boundingRectWithSize:textSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:15]} context:nil].size.height;
     // 计算段子高度
     _cellHeight = LPYEssenceTopicCellTopH + textH + LPYEssenceTopicCellMargin;
     
@@ -112,6 +124,15 @@
         CGFloat picH = cellW * self.height / self.width;
         _moiveFrame = CGRectMake(LPYEssenceTopicCellMargin, _cellHeight, cellW, picH);
         _cellHeight += picH + LPYEssenceTopicCellMargin;
+    }
+    
+    // 最新评论
+    LPYEssenceTopicCommentModel *comment = [self.top_cmt firstObject];
+    if(comment)
+    {
+        // 计算文本高度
+        CGFloat commentH = [[NSString stringWithFormat:@"%@ : %@",comment.user.username ,comment.content] boundingRectWithSize:CGSizeMake(LPYScreenWidth - 4 * LPYEssenceTopicCellMargin, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:13]} context:nil].size.height;
+        _cellHeight += 20 + commentH + LPYEssenceTopicCellMargin;
     }
     
     _cellHeight += LPYEssenceTopicCellBottomH + LPYEssenceTopicCellMargin;

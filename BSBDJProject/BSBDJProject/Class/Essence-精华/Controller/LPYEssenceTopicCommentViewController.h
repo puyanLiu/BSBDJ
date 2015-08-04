@@ -1,19 +1,15 @@
 //
-//  LPYTableViewCell.h
+//  LPYEssenceTopicCommentViewController.h
 //  BSBDJProject
 //
-//  Created by 刘蒲艳 on 15/7/28.
+//  Created by 刘蒲艳 on 15/8/2.
 //  Copyright (c) 2015年 liupuyan. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "LPYEssenceTopicModel.h"
 
-@interface  LPYEssenceTopicsCell: UITableViewCell
-
-+ (instancetype)essenceTopicsCell;
-
-/** model */
+@interface LPYEssenceTopicCommentViewController : UIViewController
+/** topic model */
 @property (nonatomic,strong) LPYEssenceTopicModel *essenceTopicModel;
-
 @end

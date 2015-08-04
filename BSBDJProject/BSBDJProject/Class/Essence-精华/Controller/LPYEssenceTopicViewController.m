@@ -13,6 +13,7 @@
 #import <MJRefresh.h>
 #import <SVProgressHUD.h>
 #import "LPYEssenceTopicsCell.h"
+#import "LPYEssenceTopicCommentViewController.h"
 
 @interface LPYEssenceTopicViewController ()
 /** topics */
@@ -78,6 +79,7 @@ static NSString * const essenceTopicsCell = @"essenceTopicsCell";
     
     self.params = params;
     [httpSessionManger GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+        
         if(self.params != params)
             return ;
         // 清空缓存数据
@@ -165,5 +167,14 @@ static NSString * const essenceTopicsCell = @"essenceTopicsCell";
 {
     LPYEssenceTopicModel *model = self.essenceTopics[indexPath.row];
     return model.cellHeight;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    LPYEssenceTopicModel *model = self.essenceTopics[indexPath.row];
+    // 跳转到评论页面
+    LPYEssenceTopicCommentViewController *commentViewController = [[LPYEssenceTopicCommentViewController alloc] init];
+    commentViewController.essenceTopicModel = model;
+    [self.navigationController pushViewController:commentViewController animated:YES];
 }
 @end

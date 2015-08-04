@@ -24,4 +24,4 @@ CGFloat const LPYEssenceTopicCellMargin = 10;
 CGFloat const LPYEssenceTopicCellTopH = 55;
 
 // topic-cell bottomH
-CGFloat const LPYEssenceTopicCellBottomH = 40;
+CGFloat const LPYEssenceTopicCellBottomH = 35;

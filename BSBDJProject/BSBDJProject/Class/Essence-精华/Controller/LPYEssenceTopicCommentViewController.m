@@ -15,6 +15,7 @@
 #import "LPYEssenceTopicCommentModel.h"
 #import <SVProgressHUD.h>
 #import "LPYEssenceTopicCommentHeaderView.h"
+#import "LPYEssenceTopicsCommentCell.h"
 
 @interface LPYEssenceTopicCommentViewController () <UITableViewDataSource,UITableViewDelegate>
 
@@ -30,11 +31,27 @@
 /** total */
 @property (nonatomic,assign) NSInteger total;
 
+/** page */
+@property (nonatomic,assign) NSInteger page;
+
 /** 保存Cell的最新评论 */
-@property (nonatomic,strong) NSArray *save_top_cmt;
+@property (nonatomic,strong) LPYEssenceTopicCommentModel *save_top_cmt;
+
+/** afn */
+@property (nonatomic,strong) AFHTTPSessionManager *httpSession;
 @end
 
 @implementation LPYEssenceTopicCommentViewController
+- (AFHTTPSessionManager *)httpSession
+{
+    if(_httpSession == nil)
+    {
+        _httpSession = [AFHTTPSessionManager manager];
+    }
+    
+    return _httpSession;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -78,6 +95,12 @@
         [self.essenceTopicModel setValue:@0 forKey:@"cellHeight"];
         self.save_top_cmt = nil;
     }
+    
+    // 结束任务
+//    [self.httpSession.tasks makeObjectsPerformSelector:@selector(cancel)];
+    
+    // 使用此方法结束任务后，将不能开启新的任务
+    [self.httpSession invalidateSessionCancelingTasks:YES];
 }
 
 - (void)setNav
@@ -86,6 +109,8 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:nil image:[UIImage imageNamed:@"comment_nav_item_share_icon"] highlightedImage:[UIImage imageNamed:@"comment_nav_item_share_icon_click"] target:nil action:nil];
 }
 
+static NSString *cellID = @"comment";
+
 - (void)setUpTableViewHeader
 {
     self.tableView.backgroundColor = LPYGlobalColor;
@@ -93,6 +118,14 @@
     self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    // 注册
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LPYEssenceTopicsCommentCell class]) bundle:nil] forCellReuseIdentifier:cellID];
+    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    // 动态调整Cell高度 ,自动适应，iOS8.0之后可用
+    self.tableView.estimatedRowHeight = 44;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
     
     LPYEssenceTopicsCell *header = [LPYEssenceTopicsCell essenceTopicsCell];
     
@@ -125,6 +158,9 @@
 
 - (void)loadTableViewData
 {
+    // 结束之前的任务
+    [self.httpSession.tasks makeObjectsPerformSelector:@selector(cancel)];
+    
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"dataList";
     params[@"c"] = @"comment";
@@ -134,20 +170,25 @@
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
         if([responseObject count] > 0)
         {
-            [responseObject writeToFile:@"/Users/liupuyan/Desktop/xxxx.plist" atomically:YES];
+            self.page = 1;
             self.hotComments = [LPYEssenceTopicCommentModel objectArrayWithKeyValuesArray:responseObject[@"hot"]];
             self.latestComments = [LPYEssenceTopicCommentModel objectArrayWithKeyValuesArray:responseObject[@"data"]];
             self.total = [responseObject[@"total"] integerValue];
             // 刷新tableView
             [self.tableView reloadData];
-            if(self.latestComments.count > 0 && self.total != self.latestComments.count)
+            if(self.latestComments.count > 0 && self.total > self.latestComments.count)
             {
                 self.tableView.footer.hidden = NO;
+            }
+            else
+            {
+                self.tableView.footer.hidden = YES;
             }
         }
         
         // 结束刷新
         [self.tableView.header endRefreshing];
+    
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         [SVProgressHUD showErrorWithStatus:@"加载失败。。。"];
         [self.tableView.header endRefreshing];
@@ -156,23 +197,37 @@
 
 - (void)loadMoreData
 {
+    // 结束之前的任务
+    [self.httpSession.tasks makeObjectsPerformSelector:@selector(cancel)];
+    
+    NSInteger page = self.page + 1;
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"dataList";
     params[@"c"] = @"comment";
     params[@"data_id"] = self.essenceTopicModel.ID;
-    params[@"page"] = @1;
+    params[@"page"] = @(page);
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
-        self.hotComments = [LPYEssenceTopicCommentModel objectArrayWithKeyValuesArray:responseObject[@"hot"]];
-        self.latestComments = [LPYEssenceTopicCommentModel objectArrayWithKeyValuesArray:responseObject[@"data"]];
         
-        // 刷新tableView
-        [self.tableView reloadData];
+        if([responseObject count] > 0)
+        {
+            self.page++;
+            
+            [self.latestComments addObjectsFromArray:[LPYEssenceTopicCommentModel objectArrayWithKeyValuesArray:responseObject[@"data"]]];
+            
+            // 刷新tableView
+            [self.tableView reloadData];
+        }
         
         // 结束刷新
-        [self.tableView.header endRefreshing];
+        [self.tableView.footer endRefreshing];
+        
+        if(self.total <= self.latestComments.count)
+        {
+            self.tableView.footer.hidden = YES;
+        }
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         [SVProgressHUD showErrorWithStatus:@"加载失败。。。"];
-        [self.tableView.header endRefreshing];
+        [self.tableView.footer endRefreshing];
     }];
 }
 
@@ -213,16 +268,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *ID = @"comment";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    if(cell == nil)
-    {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
-    }
+    LPYEssenceTopicsCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     
     NSArray *content = [self contentInSection:indexPath.section];
     LPYEssenceTopicCommentModel *model = content[indexPath.row];
-    cell.textLabel.text = model.content;
+    cell.commentModel = model;
     return cell;
 }
 

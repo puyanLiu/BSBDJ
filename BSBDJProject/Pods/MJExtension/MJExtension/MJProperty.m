@@ -8,7 +8,7 @@
 
 #import "MJProperty.h"
 #import "MJFoundation.h"
-#import "MJConst.h"
+#import "MJExtensionConst.h"
 
 @implementation MJPropertyKey
 
@@ -17,7 +17,7 @@
     if ([object isKindOfClass:[NSDictionary class]] && self.type == MJPropertyKeyTypeDictionary) {
         return object[self.name];
     } else if ([object isKindOfClass:[NSArray class]] && self.type == MJPropertyKeyTypeArray) {
-        return object[self.name.intValue];
+        return [object count] ? object[self.name.intValue] : nil;
     }
     return nil;
 }
@@ -64,7 +64,7 @@
 {
     _property = property;
     
-    MJAssertParamNotNil(property);
+    MJExtensionAssertParamNotNil(property);
     
     // 1.属性名
     _name = @(property_getName(property));

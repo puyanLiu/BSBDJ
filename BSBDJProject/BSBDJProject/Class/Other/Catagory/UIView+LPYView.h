@@ -35,4 +35,13 @@
 
 @property (nonatomic,assign) CGFloat centerY;
 
+/**
+ *  判断是否显示在当前窗口
+ *
+ *  @param view <#view description#>
+ *
+ *  @return <#return value description#>
+ */
++ (BOOL)isShowOnKeyWindow:(UIView *)view;
+
 @end

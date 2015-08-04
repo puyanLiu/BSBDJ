@@ -34,6 +34,12 @@
 //    self.txtPwd.attributedPlaceholder = pwdPlaceHolder;
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -47,6 +53,7 @@
 
 // 关闭
 - (IBAction)btnCloseClick {
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

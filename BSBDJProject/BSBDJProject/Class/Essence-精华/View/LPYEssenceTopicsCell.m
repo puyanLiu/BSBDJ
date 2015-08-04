@@ -12,6 +12,7 @@
 #import "LPYEssenceTopicsVoice.h"
 #import "LPYEssenceTopicsMoive.h"
 #import "LPYEssenceTopicCommentModel.h"
+#import "LPYHelpClass.h"
 
 @interface LPYEssenceTopicsCell ()
 // 头像
@@ -116,10 +117,10 @@
     // 加载时间
     self.lblCreateTime.text = self.essenceTopicModel.passtime;
     
-    [self setTopicWithButton:self.btnDing withCount:self.essenceTopicModel.love withTitle:@"顶"];
-    [self setTopicWithButton:self.btnCai withCount:self.essenceTopicModel.hate withTitle:@"踩"];
-    [self setTopicWithButton:self.btnShare withCount:self.essenceTopicModel.repost withTitle:@"分享"];
-    [self setTopicWithButton:self.btnComment withCount:self.essenceTopicModel.comment withTitle:@"评论"];
+    [LPYHelpClass setTopicWithButton:self.btnDing withCount:self.essenceTopicModel.love withTitle:@"顶"];
+    [LPYHelpClass setTopicWithButton:self.btnCai withCount:self.essenceTopicModel.hate withTitle:@"踩"];
+    [LPYHelpClass setTopicWithButton:self.btnShare withCount:self.essenceTopicModel.repost withTitle:@"分享"];
+    [LPYHelpClass setTopicWithButton:self.btnComment withCount:self.essenceTopicModel.comment withTitle:@"评论"];
     
     // 文本内容
     self.lblText.text = self.essenceTopicModel.text;
@@ -161,7 +162,7 @@
     }
     
     // 最新评论
-    LPYEssenceTopicCommentModel *comment = [self.essenceTopicModel.top_cmt firstObject];
+    LPYEssenceTopicCommentModel *comment = self.essenceTopicModel.top_cmt;
     if(comment)
     {
         self.topCommentView.hidden = NO;
@@ -171,20 +172,6 @@
     {
         self.topCommentView.hidden = YES;
     }
-}
-
-- (void)setTopicWithButton:(UIButton *)btn withCount:(NSInteger)count withTitle:(NSString *)title
-{
-    NSString *content = title;
-    if(count >= 10000)
-    {
-        content = [NSString stringWithFormat:@"%.1f万",1.0 *count / 10000];
-    }
-    else if(count > 0)
-    {
-        content = [NSString stringWithFormat:@"%zd", count];
-    }
-    [btn setTitle:content forState:UIControlStateNormal];
 }
 
 - (void)setFrame:(CGRect)frame

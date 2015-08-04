@@ -7,7 +7,7 @@
 //
 
 #import "MJFoundation.h"
-#import "MJConst.h"
+#import "MJExtensionConst.h"
 #import <CoreData/CoreData.h>
 
 static NSSet *_foundationClasses;
@@ -25,7 +25,8 @@ static NSSet *_foundationClasses;
                               [NSData class],
                               [NSArray class],
                               [NSDictionary class],
-                              [NSString class], nil];
+                              [NSString class],
+                              [NSAttributedString class], nil];
     }
     return _foundationClasses;
 }

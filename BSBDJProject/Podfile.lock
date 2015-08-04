@@ -21,7 +21,7 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - DACircularProgress (2.3.1)
-  - MJExtension (2.5.2)
+  - MJExtension (2.5.5)
   - MJRefresh (2.3.2)
   - pop (1.0.7)
   - SDWebImage (3.7.3):
@@ -41,7 +41,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
-  MJExtension: 73e812aca0846e4a7b4d7aca34cfacf48d1f3310
+  MJExtension: fa526531d00a7c88771bf72e626bb49fb9292b9c
   MJRefresh: 0f6f5e8387970607c26080b44058b229a23065d7
   pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84

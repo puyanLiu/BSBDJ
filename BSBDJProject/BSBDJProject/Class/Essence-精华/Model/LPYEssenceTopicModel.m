@@ -28,19 +28,21 @@
              @"pic_small" : @"image0",
              @"pic_middle" : @"image1",
              @"pic_large" : @"image2",
-             @"ID" : @"id"
+             @"ID" : @"id",
+             @"top_cmt" : @"top_cmt[0]"
              };
+    // 传递路径支持多个层级关系。例如top_cmt[0].xxx.xxx
 }
 
-+ (NSDictionary *)objectClassInArray
-{
+//+ (NSDictionary *)objectClassInArray
+//{
+////    return @{
+////             @"top_cmt" : @"LPYEssenceTopicCommentModel"
+////             };
 //    return @{
-//             @"top_cmt" : @"LPYEssenceTopicCommentModel"
+//             @"top_cmt" : [LPYEssenceTopicCommentModel class]
 //             };
-    return @{
-             @"top_cmt" : [LPYEssenceTopicCommentModel class]
-             };
-}
+//}
 
 
 /**
@@ -127,11 +129,12 @@
     }
     
     // 最新评论
-    LPYEssenceTopicCommentModel *comment = [self.top_cmt firstObject];
+    LPYEssenceTopicCommentModel *comment = self.top_cmt;
     if(comment)
     {
         // 计算文本高度
         CGFloat commentH = [[NSString stringWithFormat:@"%@ : %@",comment.user.username ,comment.content] boundingRectWithSize:CGSizeMake(LPYScreenWidth - 4 * LPYEssenceTopicCellMargin, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:13]} context:nil].size.height;
+        // 此处的20表示最新评论的高度
         _cellHeight += 20 + commentH + LPYEssenceTopicCellMargin;
     }
     

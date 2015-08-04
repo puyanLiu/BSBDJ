@@ -81,4 +81,21 @@
 {
     return self.center.y;
 }
+
++ (BOOL)isShowOnKeyWindow:(UIView *)view
+{
+    // 将当前View的坐标系转换为窗口坐标系
+    // 第二个参数如果写nil，表示的也是UIWindow
+    //        CGPoint windowP = [subView convertPoint:subView.frame.origin toView:[UIApplication sharedApplication].keyWindow];
+    // 将控件在父控件的坐标系转换为在主窗口的坐标系
+
+    // 判断两个矩形是否相交
+    //        CGRectIntersectsRect(<#CGRect rect1#>, <#CGRect rect2#>)
+    
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    
+    CGRect windowRect = window.bounds;
+    CGRect newRect = [view.superview convertRect:view.frame toView:window];
+    return view.window == window && !view.hidden && view.alpha > 0.01 && CGRectIntersectsRect(windowRect, newRect);
+}
 @end

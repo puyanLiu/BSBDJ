@@ -25,3 +25,12 @@ CGFloat const LPYEssenceTopicCellTopH = 55;
 
 // topic-cell bottomH
 CGFloat const LPYEssenceTopicCellBottomH = 35;
+
+// comment 男
+NSString const *LPYEssenceMale = @"m";
+
+// comment 女
+NSString const *LPYEssenceFaMale = @"f";
+
+// status bar 高度
+CGFloat const LPYStatusBarH = 20.0;

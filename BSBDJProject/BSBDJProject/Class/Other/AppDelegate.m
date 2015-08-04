@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "LPYTabBarController.h"
 #import "LPYPushGuideView.h"
+#import "LPYScrollViewWindow.h"
 
 @interface AppDelegate ()
 
@@ -52,6 +53,12 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    // 如果添加在didFinishLaunchingWithOptions
+    // 会出现Application windows are expected to have a root view controller at the end of application launch
+    
+    // 添加UIWindow，用来控制UIScrollView的滚动
+    [LPYScrollViewWindow show];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

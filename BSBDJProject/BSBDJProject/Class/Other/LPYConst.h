@@ -28,3 +28,12 @@ UIKIT_EXTERN CGFloat const LPYEssenceTopicCellMargin;
 UIKIT_EXTERN CGFloat const LPYEssenceTopicCellTopH;
 // topic-cell bottomH
 UIKIT_EXTERN CGFloat const LPYEssenceTopicCellBottomH;
+
+// comment 男
+UIKIT_EXTERN NSString const *LPYEssenceMale;
+
+// comment 女
+UIKIT_EXTERN NSString const *LPYEssenceFaMale;
+
+// status bar 高度
+UIKIT_EXTERN CGFloat const LPYStatusBarH;

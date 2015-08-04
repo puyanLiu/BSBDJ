@@ -33,6 +33,8 @@
 {
     if(self = [super initWithReuseIdentifier:reuseIdentifier])
     {
+        self.contentView.backgroundColor = LPYGlobalColor;
+        
         UILabel *label = [[UILabel alloc] init];
         label.textColor = LPYColor(67, 67, 67);
         label.autoresizingMask = UIViewAutoresizingFlexibleHeight;

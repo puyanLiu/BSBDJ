@@ -8,10 +8,12 @@
 
 #import "NSObject+MJKeyValue.h"
 #import "NSObject+MJProperty.h"
+#import "NSString+MJExtension.h"
 #import "MJProperty.h"
 #import "MJType.h"
-#import "MJConst.h"
+#import "MJExtensionConst.h"
 #import "MJFoundation.h"
+#import "NSString+MJExtension.h"
 
 @implementation NSObject (MJKeyValue)
 
@@ -24,7 +26,15 @@ static const char MJReferenceReplacedKeyWhenCreatingKeyValuesKey = '\0';
 
 + (BOOL)isReferenceReplacedKeyWhenCreatingKeyValues
 {
-    return [objc_getAssociatedObject(self, &MJReferenceReplacedKeyWhenCreatingKeyValuesKey) boolValue];
+    __block id value = objc_getAssociatedObject(self, &MJReferenceReplacedKeyWhenCreatingKeyValuesKey);
+    if (!value) {
+        [self enumerateAllClasses:^(__unsafe_unretained Class c, BOOL *stop) {
+            value = objc_getAssociatedObject(c, &MJReferenceReplacedKeyWhenCreatingKeyValuesKey);
+            
+            if (value) *stop = YES;
+        }];
+    }
+    return [value boolValue];
 }
 
 #pragma mark - --常用的对象--
@@ -67,7 +77,7 @@ static NSNumberFormatter *_numberFormatter;
 
 + (instancetype)objectWithFilename:(NSString *)filename error:(NSError *__autoreleasing *)error
 {
-    MJAssertError(filename != nil, nil, error, @"filename参数为nil");
+    MJExtensionAssertError(filename != nil, nil, error, @"filename参数为nil");
     
     return [self objectWithFile:[[NSBundle mainBundle] pathForResource:filename ofType:nil] error:error];
 }
@@ -79,7 +89,7 @@ static NSNumberFormatter *_numberFormatter;
 
 + (instancetype)objectWithFile:(NSString *)file error:(NSError *__autoreleasing *)error
 {
-    MJAssertError(file != nil, nil, error, @"file参数为nil");
+    MJExtensionAssertError(file != nil, nil, error, @"file参数为nil");
     
     return [self objectWithKeyValues:[NSDictionary dictionaryWithContentsOfFile:file] error:error];
 }
@@ -104,14 +114,9 @@ static NSNumberFormatter *_numberFormatter;
  */
 - (instancetype)setKeyValues:(id)keyValues context:(NSManagedObjectContext *)context error:(NSError *__autoreleasing *)error
 {
-    // 如果是JSON字符串
-    if ([keyValues isKindOfClass:[NSString class]]) {
-        keyValues = [((NSString *)keyValues) JSONObject];
-    } else if ([keyValues isKindOfClass:[NSData class]]) {
-        keyValues = [NSJSONSerialization JSONObjectWithData:keyValues options:kNilOptions error:nil];
-    }
+    keyValues = [keyValues JSONObject];
     
-    MJAssertError([keyValues isKindOfClass:[NSDictionary class]], self, error, @"keyValues参数不是一个字典");
+    MJExtensionAssertError([keyValues isKindOfClass:[NSDictionary class]], self, error, @"keyValues参数不是一个字典");
     
     @try {
         Class aClass = [self class];
@@ -148,8 +153,18 @@ static NSNumberFormatter *_numberFormatter;
             if (!type.isFromFoundation && typeClass) {
                 value = [typeClass objectWithKeyValues:value context:context error:error];
             } else if (objectClass) {
-                // 3.字典数组-->模型数组
-                value = [objectClass objectArrayWithKeyValuesArray:value context:context error:error];
+                // string array -> url array
+                if (objectClass == [NSURL class] && [value isKindOfClass:[NSArray class]]) {
+                    NSMutableArray *urlArray = [NSMutableArray array];
+                    for (NSString *string in value) {
+                        if (![string isKindOfClass:[NSString class]]) continue;
+                        [urlArray addObject:string.url];
+                    }
+                    value = urlArray;
+                } else {
+                    // 3.字典数组-->模型数组
+                    value = [objectClass objectArrayWithKeyValuesArray:value context:context error:error];
+                }
             } else if (typeClass == [NSString class]) {
                 if ([value isKindOfClass:[NSNumber class]]) {
                     // NSNumber -> NSString
@@ -162,8 +177,7 @@ static NSNumberFormatter *_numberFormatter;
                 if (typeClass == [NSURL class]) {
                     // NSString -> NSURL
                     // 字符串转码
-                    value = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)value,(CFStringRef)@"!$&'()*+,-./:;=?@_~%#[]", NULL,kCFStringEncodingUTF8));
-                    value = [NSURL URLWithString:value];
+                    value = [value url];
                 } else if (type.isNumberType) {
                     NSString *oldValue = value;
                     
@@ -193,7 +207,8 @@ static NSNumberFormatter *_numberFormatter;
             [self keyValuesDidFinishConvertingToObject];
         }
     } @catch (NSException *exception) {
-        MJBuildError(error, exception.reason);
+        MJExtensionBuildError(error, exception.reason);
+        NSLog(@"%@", exception);
     }
     return self;
 }
@@ -220,14 +235,10 @@ static NSNumberFormatter *_numberFormatter;
     if ([MJFoundation isClassFromFoundation:self]) return keyValuesArray;
     
     // 如果是JSON字符串
-    if ([keyValuesArray isKindOfClass:[NSString class]]) {
-        keyValuesArray = [((NSString *)keyValuesArray) JSONObject];
-    } else if ([keyValuesArray isKindOfClass:[NSData class]]) {
-        keyValuesArray = [NSJSONSerialization JSONObjectWithData:keyValuesArray options:kNilOptions error:nil];
-    }
+    keyValuesArray = [keyValuesArray JSONObject];
     
     // 1.判断真实性
-    MJAssertError([keyValuesArray isKindOfClass:[NSArray class]], nil, error, @"keyValuesArray参数不是一个数组");
+    MJExtensionAssertError([keyValuesArray isKindOfClass:[NSArray class]], nil, error, @"keyValuesArray参数不是一个数组");
     
     // 2.创建数组
     NSMutableArray *modelArray = [NSMutableArray array];
@@ -252,7 +263,7 @@ static NSNumberFormatter *_numberFormatter;
 
 + (NSMutableArray *)objectArrayWithFilename:(NSString *)filename error:(NSError *__autoreleasing *)error
 {
-    MJAssertError(filename != nil, nil, error, @"filename参数为nil");
+    MJExtensionAssertError(filename != nil, nil, error, @"filename参数为nil");
     
     return [self objectArrayWithFile:[[NSBundle mainBundle] pathForResource:filename ofType:nil] error:error];
 }
@@ -264,7 +275,7 @@ static NSNumberFormatter *_numberFormatter;
 
 + (NSMutableArray *)objectArrayWithFile:(NSString *)file error:(NSError *__autoreleasing *)error
 {
-    MJAssertError(file != nil, nil, error, @"file参数为nil");
+    MJExtensionAssertError(file != nil, nil, error, @"file参数为nil");
     
     return [self objectArrayWithKeyValuesArray:[NSArray arrayWithContentsOfFile:file] error:error];
 }
@@ -395,7 +406,8 @@ static NSNumberFormatter *_numberFormatter;
             [self objectDidFinishConvertingToKeyValues];
         }
     } @catch (NSException *exception) {
-        MJBuildError(error, exception.reason);
+        MJExtensionBuildError(error, exception.reason);
+        NSLog(@"%@", exception);
     }
     
     return keyValues;
@@ -434,7 +446,7 @@ static NSNumberFormatter *_numberFormatter;
 + (NSMutableArray *)keyValuesArrayWithObjectArray:(NSArray *)objectArray keys:(NSArray *)keys ignoredKeys:(NSArray *)ignoredKeys error:(NSError *__autoreleasing *)error
 {
     // 0.判断真实性
-    MJAssertError([objectArray isKindOfClass:[NSArray class]], nil, error, @"objectArray参数不是一个数组");
+    MJExtensionAssertError([objectArray isKindOfClass:[NSArray class]], nil, error, @"objectArray参数不是一个数组");
     
     // 1.创建数组
     NSMutableArray *keyValuesArray = [NSMutableArray array];
@@ -453,6 +465,8 @@ static NSNumberFormatter *_numberFormatter;
 {
     if ([self isKindOfClass:[NSString class]]) {
         return [((NSString *)self) dataUsingEncoding:NSUTF8StringEncoding];
+    } else if ([self isKindOfClass:[NSData class]]) {
+        return (NSData *)self;
     }
     
     return [NSJSONSerialization dataWithJSONObject:[self JSONObject] options:kNilOptions error:nil];
@@ -462,6 +476,8 @@ static NSNumberFormatter *_numberFormatter;
 {
     if ([self isKindOfClass:[NSString class]]) {
         return [NSJSONSerialization JSONObjectWithData:[((NSString *)self) dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:nil];
+    } else if ([self isKindOfClass:[NSData class]]) {
+        return [NSJSONSerialization JSONObjectWithData:(NSData *)self options:kNilOptions error:nil];
     }
     
     return self.keyValues;
@@ -471,6 +487,8 @@ static NSNumberFormatter *_numberFormatter;
 {
     if ([self isKindOfClass:[NSString class]]) {
         return (NSString *)self;
+    } else if ([self isKindOfClass:[NSData class]]) {
+        return [[NSString alloc] initWithData:(NSData *)self encoding:NSUTF8StringEncoding];
     }
     
     return [[NSString alloc] initWithData:[self JSONData] encoding:NSUTF8StringEncoding];

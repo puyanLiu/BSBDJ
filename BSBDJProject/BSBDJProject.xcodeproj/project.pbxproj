@@ -25,6 +25,10 @@
 		C46580461B67CE2F00F8F521 /* LPYEssenceTopicsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C46580441B67CE2F00F8F521 /* LPYEssenceTopicsCell.m */; };
 		C46580471B67CE2F00F8F521 /* LPYEssenceTopicsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C46580451B67CE2F00F8F521 /* LPYEssenceTopicsCell.xib */; };
 		C46A0F0D1B70AB27003A7890 /* LPYEssenceTopicCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C46A0F0C1B70AB27003A7890 /* LPYEssenceTopicCommentHeaderView.m */; };
+		C46A0F111B70B32E003A7890 /* LPYEssenceTopicsCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C46A0F0F1B70B32E003A7890 /* LPYEssenceTopicsCommentCell.m */; };
+		C46A0F121B70B32E003A7890 /* LPYEssenceTopicsCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C46A0F101B70B32E003A7890 /* LPYEssenceTopicsCommentCell.xib */; };
+		C46A0F151B70BCA7003A7890 /* LPYHelpClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C46A0F141B70BCA7003A7890 /* LPYHelpClass.m */; };
+		C46A0F181B70FC23003A7890 /* LPYScrollViewWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C46A0F171B70FC23003A7890 /* LPYScrollViewWindow.m */; };
 		C471D06A1B5FD87400BAD5D4 /* UIImage+LPYImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C471D0671B5FD87400BAD5D4 /* UIImage+LPYImage.m */; };
 		C471D06B1B5FD87400BAD5D4 /* UIView+LPYView.m in Sources */ = {isa = PBXBuildFile; fileRef = C471D0691B5FD87400BAD5D4 /* UIView+LPYView.m */; };
 		C471D06E1B5FE3CC00BAD5D4 /* LPYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C471D06D1B5FE3CC00BAD5D4 /* LPYTabBar.m */; };
@@ -113,6 +117,13 @@
 		C46580451B67CE2F00F8F521 /* LPYEssenceTopicsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPYEssenceTopicsCell.xib; sourceTree = "<group>"; };
 		C46A0F0B1B70AB27003A7890 /* LPYEssenceTopicCommentHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYEssenceTopicCommentHeaderView.h; sourceTree = "<group>"; };
 		C46A0F0C1B70AB27003A7890 /* LPYEssenceTopicCommentHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYEssenceTopicCommentHeaderView.m; sourceTree = "<group>"; };
+		C46A0F0E1B70B32E003A7890 /* LPYEssenceTopicsCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYEssenceTopicsCommentCell.h; sourceTree = "<group>"; };
+		C46A0F0F1B70B32E003A7890 /* LPYEssenceTopicsCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYEssenceTopicsCommentCell.m; sourceTree = "<group>"; };
+		C46A0F101B70B32E003A7890 /* LPYEssenceTopicsCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPYEssenceTopicsCommentCell.xib; sourceTree = "<group>"; };
+		C46A0F131B70BCA7003A7890 /* LPYHelpClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYHelpClass.h; sourceTree = "<group>"; };
+		C46A0F141B70BCA7003A7890 /* LPYHelpClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYHelpClass.m; sourceTree = "<group>"; };
+		C46A0F161B70FC23003A7890 /* LPYScrollViewWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYScrollViewWindow.h; sourceTree = "<group>"; };
+		C46A0F171B70FC23003A7890 /* LPYScrollViewWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYScrollViewWindow.m; sourceTree = "<group>"; };
 		C471D0651B5FD6C400BAD5D4 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		C471D0661B5FD87400BAD5D4 /* UIImage+LPYImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LPYImage.h"; sourceTree = "<group>"; };
 		C471D0671B5FD87400BAD5D4 /* UIImage+LPYImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LPYImage.m"; sourceTree = "<group>"; };
@@ -377,6 +388,9 @@
 				C484047E1B6D0D4C0002F860 /* LPYEssenceTopicsMoive.xib */,
 				C46A0F0B1B70AB27003A7890 /* LPYEssenceTopicCommentHeaderView.h */,
 				C46A0F0C1B70AB27003A7890 /* LPYEssenceTopicCommentHeaderView.m */,
+				C46A0F0E1B70B32E003A7890 /* LPYEssenceTopicsCommentCell.h */,
+				C46A0F0F1B70B32E003A7890 /* LPYEssenceTopicsCommentCell.m */,
+				C46A0F101B70B32E003A7890 /* LPYEssenceTopicsCommentCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -508,9 +522,13 @@
 				C4A352791B5FC31D002C2E39 /* AppDelegate.m */,
 				C4996A741B68F5AF005F5983 /* LPYConst.h */,
 				C4996A751B68F5AF005F5983 /* LPYConst.m */,
+				C46A0F131B70BCA7003A7890 /* LPYHelpClass.h */,
+				C46A0F141B70BCA7003A7890 /* LPYHelpClass.m */,
 				C4A0FF821B5FCB5B0083FCD5 /* Catagory */,
 				C4A3527B1B5FC31D002C2E39 /* View */,
 				C4A3527C1B5FC31D002C2E39 /* ViewController */,
+				C46A0F161B70FC23003A7890 /* LPYScrollViewWindow.h */,
+				C46A0F171B70FC23003A7890 /* LPYScrollViewWindow.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -667,6 +685,7 @@
 				C404F96D1B6A836D00BD6196 /* LPYPictureLargeViewController.xib in Resources */,
 				C4CB4C511B6B5501005695F6 /* LPYPublishView.xib in Resources */,
 				C471D08A1B5FFB1900BAD5D4 /* LPYRecommendViewController.xib in Resources */,
+				C46A0F121B70B32E003A7890 /* LPYEssenceTopicsCommentCell.xib in Resources */,
 				C4042F2F1B6A418700408F9D /* LPYEssenceTopicsPicture.xib in Resources */,
 				C4809BAE1B61D59700E60BCF /* LPYCategoryCell.xib in Resources */,
 				C46580471B67CE2F00F8F521 /* LPYEssenceTopicsCell.xib in Resources */,
@@ -743,12 +762,15 @@
 				C46A0F0D1B70AB27003A7890 /* LPYEssenceTopicCommentHeaderView.m in Sources */,
 				C45DD7FA1B6E449500042089 /* LPYEssenceTopicCommentViewController.m in Sources */,
 				C493FD361B62A1420046ACEB /* LPYRecommendTagsController.m in Sources */,
+				C46A0F181B70FC23003A7890 /* LPYScrollViewWindow.m in Sources */,
 				C4042F2D1B6A417600408F9D /* LPYEssenceTopicsPicture.m in Sources */,
 				C4809BAD1B61D59700E60BCF /* LPYCategoryCell.m in Sources */,
 				C45DD7F31B6E351000042089 /* LPYEssenceTopicCommentModel.m in Sources */,
 				C440BB161B64F475008A026D /* LPYPushGuideView.m in Sources */,
+				C46A0F151B70BCA7003A7890 /* LPYHelpClass.m in Sources */,
 				C4B418411B5FC9090096569F /* LPYTabBarController.m in Sources */,
 				C4DCBDF01B6C98360072E2ED /* LPYEssenceTopicsVoice.m in Sources */,
+				C46A0F111B70B32E003A7890 /* LPYEssenceTopicsCommentCell.m in Sources */,
 				C45DD7F61B6E352500042089 /* LPYEssenceTopicUserModel.m in Sources */,
 				C471D0781B5FECE400BAD5D4 /* LPYFriendTrendsViewController.m in Sources */,
 				C48DC5471B6548D00018C568 /* LPYEssenceTopicViewController.m in Sources */,

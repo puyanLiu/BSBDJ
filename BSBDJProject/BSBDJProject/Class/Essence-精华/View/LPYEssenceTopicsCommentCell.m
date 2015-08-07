@@ -90,4 +90,10 @@
     // Configure the view for the selected state
 }
 
+// 允许成为第一响应者
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
 @end

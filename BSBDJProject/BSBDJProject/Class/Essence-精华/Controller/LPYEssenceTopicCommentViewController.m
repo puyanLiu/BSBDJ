@@ -266,12 +266,18 @@ static NSString *cellID = @"comment";
     return self.latestComments;
 }
 
+- (LPYEssenceTopicCommentModel *)commentModelWithIndexPath:(NSIndexPath *)indexPath
+{
+    NSArray *content = [self contentInSection:indexPath.section];
+    LPYEssenceTopicCommentModel *model = content[indexPath.row];
+    return model;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     LPYEssenceTopicsCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     
-    NSArray *content = [self contentInSection:indexPath.section];
-    LPYEssenceTopicCommentModel *model = content[indexPath.row];
+    LPYEssenceTopicCommentModel *model = [self commentModelWithIndexPath:indexPath];
     cell.commentModel = model;
     return cell;
 }
@@ -357,6 +363,53 @@ static NSString *cellID = @"comment";
 //{
 //    return 22;
 //}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // 单例，如果在其他地方使用，先清空一下menuController
+    UIMenuController *menu = [UIMenuController sharedMenuController];
+    // 显示
+    if(menu.isMenuVisible)
+    {
+        LPYLog(@"------");
+        // 隐藏
+        [menu setMenuVisible:NO animated:YES];
+        return;
+    }
+
+    LPYEssenceTopicsCommentCell *cell = (LPYEssenceTopicsCommentCell *)[tableView cellForRowAtIndexPath:indexPath];
+    // 成为第一响应者
+    [cell becomeFirstResponder];
+    
+    
+    menu.menuItems = @[
+    [[UIMenuItem alloc] initWithTitle:@"顶" action:@selector(itemLoveClick:)],
+    [[UIMenuItem alloc] initWithTitle:@"回复" action:@selector(itemReplyClick:)],
+    [[UIMenuItem alloc] initWithTitle:@"举报" action:@selector(itemReportClick:)]
+                    ];
+    CGRect rect = cell.bounds;
+    rect.origin.y = cell.height * 0.5;
+    [menu setTargetRect:rect inView:cell];
+    [menu setMenuVisible:YES animated:YES];
+}
+
+- (void)itemLoveClick:(UIMenuItem *)item
+{
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    LPYEssenceTopicCommentModel *model = [self commentModelWithIndexPath:indexPath];
+    
+    LPYLog(@"顶-----%@",model.content);
+}
+
+- (void)itemReplyClick:(UIMenuItem *)item
+{
+    LPYLog(@"回复");
+}
+
+- (void)itemReportClick:(UIMenuItem *)item
+{
+    LPYLog(@"举报");
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

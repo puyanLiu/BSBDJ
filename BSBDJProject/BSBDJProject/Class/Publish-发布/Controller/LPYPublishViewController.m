@@ -9,6 +9,7 @@
 #import "LPYPublishViewController.h"
 #import "LPYContentVerticalButton.h"
 #import <POP.h>
+#import "LPYPublishSegementViewController.h"
 
 // 弹性影响因素
 #define springEffect 10;
@@ -174,7 +175,9 @@
         }
         else if(sender.tag == 3)
         {
-            LPYLog(@"发段子");
+            LPYPublishSegementViewController *segement = [[LPYPublishSegementViewController alloc] init];
+            UINavigationController *navigation =  [[UINavigationController alloc] initWithRootViewController:segement];
+            [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:navigation animated:YES completion:nil];
         }
         else if(sender.tag == 4)
         {

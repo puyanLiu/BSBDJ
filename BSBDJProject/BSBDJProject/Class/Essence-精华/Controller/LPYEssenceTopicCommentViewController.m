@@ -353,10 +353,10 @@ static NSString *cellID = @"comment";
     return header;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    return 22;
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+//{
+//    return 22;
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

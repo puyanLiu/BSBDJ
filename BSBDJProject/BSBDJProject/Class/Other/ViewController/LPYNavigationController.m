@@ -24,6 +24,18 @@
     NSMutableDictionary *textAttributes = [NSMutableDictionary dictionary];
     textAttributes[NSFontAttributeName] = [UIFont systemFontOfSize:20 weight:1.3];
     navigationBar.titleTextAttributes = textAttributes;
+    
+    // 设置导航条左边右边字体
+    UIBarButtonItem *barButton = [UIBarButtonItem appearance];
+    NSMutableDictionary *itemAttrs = [NSMutableDictionary dictionary];
+    itemAttrs[NSForegroundColorAttributeName] = [UIColor blackColor];
+    
+    [barButton setTitleTextAttributes:itemAttrs forState:UIControlStateNormal];
+    
+    NSMutableDictionary *itemDisableAttrs = [NSMutableDictionary dictionary];
+    itemDisableAttrs[NSForegroundColorAttributeName] = [UIColor grayColor];
+    [barButton setTitleTextAttributes:itemDisableAttrs forState:UIControlStateDisabled];
+
 }
 
 - (void)viewDidLoad {

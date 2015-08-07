@@ -82,6 +82,18 @@
     return self.center.y;
 }
 
+- (void)setSize:(CGSize)size
+{
+    CGRect frame = self.frame;
+    frame.size = size;
+    self.frame = frame;
+}
+
+- (CGSize)size
+{
+    return self.frame.size;
+}
+
 + (BOOL)isShowOnKeyWindow:(UIView *)view
 {
     // 将当前View的坐标系转换为窗口坐标系

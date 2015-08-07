@@ -35,6 +35,8 @@
 
 @property (nonatomic,assign) CGFloat centerY;
 
+@property (nonatomic,assign) CGSize size;
+
 /**
  *  判断是否显示在当前窗口
  *

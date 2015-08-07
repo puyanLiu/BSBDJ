@@ -15,6 +15,7 @@
 #import "LPYNewViewController.h"
 #import "LPYPublishViewController.h"
 #import "LPYPublishView.h"
+#import "LPYPublishSegementViewController.h"
 
 @interface LPYTabBarController ()
 /**
@@ -73,10 +74,14 @@ UIWindow *window;
 UIWindow *window2;
 - (void)btnPublishClick
 {
-    [LPYPublishView show];
+//    [LPYPublishView show];
     
-    //    LPYPublishViewController *publish = [[LPYPublishViewController alloc] init];
-    //    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:publish animated:NO completion:nil];
+//        LPYPublishViewController *publish = [[LPYPublishViewController alloc] initWithNibName:NSStringFromClass([LPYPublishViewController class]) bundle:nil];
+//        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:publish animated:NO completion:nil];
+    
+    LPYPublishSegementViewController *segement = [[LPYPublishSegementViewController alloc] init];
+    UINavigationController *navigation =  [[UINavigationController alloc] initWithRootViewController:segement];
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:navigation animated:YES completion:nil];
     
     // 弹出的页面 半透明效果
     //    LPYPublishView *publishView = [LPYPublishView publishView];

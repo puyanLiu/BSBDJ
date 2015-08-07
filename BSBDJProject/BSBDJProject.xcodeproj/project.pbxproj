@@ -12,12 +12,16 @@
 		C404F9681B6A7AF000BD6196 /* LPYLabeledCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = C404F9671B6A7AF000BD6196 /* LPYLabeledCircularProgressView.m */; };
 		C404F96C1B6A836D00BD6196 /* LPYPictureLargeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C404F96A1B6A836D00BD6196 /* LPYPictureLargeViewController.m */; };
 		C404F96D1B6A836D00BD6196 /* LPYPictureLargeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C404F96B1B6A836D00BD6196 /* LPYPictureLargeViewController.xib */; };
+		C4314E931B722591001D5887 /* LPYPublishSegementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4314E921B722591001D5887 /* LPYPublishSegementViewController.m */; };
+		C4314EA91B7234BC001D5887 /* LPYPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4314EA81B7234BC001D5887 /* LPYPlaceholderTextView.m */; };
 		C440BB121B64F3D7008A026D /* LPYLoginOrRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C440BB101B64F3D7008A026D /* LPYLoginOrRegisterViewController.m */; };
 		C440BB131B64F3D7008A026D /* LPYLoginOrRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C440BB111B64F3D7008A026D /* LPYLoginOrRegisterViewController.xib */; };
 		C440BB161B64F475008A026D /* LPYPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = C440BB151B64F475008A026D /* LPYPushGuideView.m */; };
 		C440BB181B64F503008A026D /* LPYPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C440BB171B64F503008A026D /* LPYPushGuideView.xib */; };
 		C440BB1B1B650267008A026D /* LPYContentVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C440BB1A1B650267008A026D /* LPYContentVerticalButton.m */; };
 		C440BB1E1B651128008A026D /* LPYLoginOrRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C440BB1D1B651128008A026D /* LPYLoginOrRegisterTextField.m */; };
+		C457861C1B7382EF000B24FC /* LPYShowTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = C457861B1B7382EF000B24FC /* LPYShowTagView.m */; };
+		C457861E1B7382FE000B24FC /* LPYShowTagView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C457861D1B7382FE000B24FC /* LPYShowTagView.xib */; };
 		C45DD7F31B6E351000042089 /* LPYEssenceTopicCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C45DD7F21B6E351000042089 /* LPYEssenceTopicCommentModel.m */; };
 		C45DD7F61B6E352500042089 /* LPYEssenceTopicUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C45DD7F51B6E352500042089 /* LPYEssenceTopicUserModel.m */; };
 		C45DD7FA1B6E449500042089 /* LPYEssenceTopicCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C45DD7F81B6E449500042089 /* LPYEssenceTopicCommentViewController.m */; };
@@ -95,6 +99,10 @@
 		C404F9691B6A836D00BD6196 /* LPYPictureLargeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYPictureLargeViewController.h; sourceTree = "<group>"; };
 		C404F96A1B6A836D00BD6196 /* LPYPictureLargeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYPictureLargeViewController.m; sourceTree = "<group>"; };
 		C404F96B1B6A836D00BD6196 /* LPYPictureLargeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPYPictureLargeViewController.xib; sourceTree = "<group>"; };
+		C4314E911B722591001D5887 /* LPYPublishSegementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYPublishSegementViewController.h; sourceTree = "<group>"; };
+		C4314E921B722591001D5887 /* LPYPublishSegementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYPublishSegementViewController.m; sourceTree = "<group>"; };
+		C4314EA71B7234BC001D5887 /* LPYPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYPlaceholderTextView.h; sourceTree = "<group>"; };
+		C4314EA81B7234BC001D5887 /* LPYPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYPlaceholderTextView.m; sourceTree = "<group>"; };
 		C440BB0F1B64F3D7008A026D /* LPYLoginOrRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYLoginOrRegisterViewController.h; sourceTree = "<group>"; };
 		C440BB101B64F3D7008A026D /* LPYLoginOrRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYLoginOrRegisterViewController.m; sourceTree = "<group>"; };
 		C440BB111B64F3D7008A026D /* LPYLoginOrRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPYLoginOrRegisterViewController.xib; sourceTree = "<group>"; };
@@ -105,6 +113,9 @@
 		C440BB1A1B650267008A026D /* LPYContentVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYContentVerticalButton.m; sourceTree = "<group>"; };
 		C440BB1C1B651128008A026D /* LPYLoginOrRegisterTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYLoginOrRegisterTextField.h; sourceTree = "<group>"; };
 		C440BB1D1B651128008A026D /* LPYLoginOrRegisterTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYLoginOrRegisterTextField.m; sourceTree = "<group>"; };
+		C457861A1B7382EF000B24FC /* LPYShowTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYShowTagView.h; sourceTree = "<group>"; };
+		C457861B1B7382EF000B24FC /* LPYShowTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYShowTagView.m; sourceTree = "<group>"; };
+		C457861D1B7382FE000B24FC /* LPYShowTagView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPYShowTagView.xib; sourceTree = "<group>"; };
 		C45DD7F11B6E351000042089 /* LPYEssenceTopicCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYEssenceTopicCommentModel.h; sourceTree = "<group>"; };
 		C45DD7F21B6E351000042089 /* LPYEssenceTopicCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYEssenceTopicCommentModel.m; sourceTree = "<group>"; };
 		C45DD7F41B6E352500042089 /* LPYEssenceTopicUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYEssenceTopicUserModel.h; sourceTree = "<group>"; };
@@ -524,11 +535,11 @@
 				C4996A751B68F5AF005F5983 /* LPYConst.m */,
 				C46A0F131B70BCA7003A7890 /* LPYHelpClass.h */,
 				C46A0F141B70BCA7003A7890 /* LPYHelpClass.m */,
+				C46A0F161B70FC23003A7890 /* LPYScrollViewWindow.h */,
+				C46A0F171B70FC23003A7890 /* LPYScrollViewWindow.m */,
 				C4A0FF821B5FCB5B0083FCD5 /* Catagory */,
 				C4A3527B1B5FC31D002C2E39 /* View */,
 				C4A3527C1B5FC31D002C2E39 /* ViewController */,
-				C46A0F161B70FC23003A7890 /* LPYScrollViewWindow.h */,
-				C46A0F171B70FC23003A7890 /* LPYScrollViewWindow.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -572,6 +583,8 @@
 				C4CB4C481B6B0505005695F6 /* LPYPublishViewController.h */,
 				C4CB4C491B6B0505005695F6 /* LPYPublishViewController.m */,
 				C4CB4C4A1B6B0505005695F6 /* LPYPublishViewController.xib */,
+				C4314E911B722591001D5887 /* LPYPublishSegementViewController.h */,
+				C4314E921B722591001D5887 /* LPYPublishSegementViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -589,6 +602,11 @@
 				C4CB4C4D1B6B54F1005695F6 /* LPYPublishView.h */,
 				C4CB4C4E1B6B54F1005695F6 /* LPYPublishView.m */,
 				C4CB4C501B6B5501005695F6 /* LPYPublishView.xib */,
+				C4314EA71B7234BC001D5887 /* LPYPlaceholderTextView.h */,
+				C4314EA81B7234BC001D5887 /* LPYPlaceholderTextView.m */,
+				C457861A1B7382EF000B24FC /* LPYShowTagView.h */,
+				C457861B1B7382EF000B24FC /* LPYShowTagView.m */,
+				C457861D1B7382FE000B24FC /* LPYShowTagView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -688,6 +706,7 @@
 				C46A0F121B70B32E003A7890 /* LPYEssenceTopicsCommentCell.xib in Resources */,
 				C4042F2F1B6A418700408F9D /* LPYEssenceTopicsPicture.xib in Resources */,
 				C4809BAE1B61D59700E60BCF /* LPYCategoryCell.xib in Resources */,
+				C457861E1B7382FE000B24FC /* LPYShowTagView.xib in Resources */,
 				C46580471B67CE2F00F8F521 /* LPYEssenceTopicsCell.xib in Resources */,
 				C471D0791B5FECE400BAD5D4 /* LPYFriendTrendsViewController.xib in Resources */,
 				C4A3524E1B5FC033002C2E39 /* Images.xcassets in Resources */,
@@ -747,6 +766,7 @@
 			files = (
 				C46580461B67CE2F00F8F521 /* LPYEssenceTopicsCell.m in Sources */,
 				C471D07C1B5FF14300BAD5D4 /* LPYEssenceViewController.m in Sources */,
+				C457861C1B7382EF000B24FC /* LPYShowTagView.m in Sources */,
 				C493FD3E1B62A1E10046ACEB /* LPYRecommendTagsModel.m in Sources */,
 				C4A352811B5FC31D002C2E39 /* AppDelegate.m in Sources */,
 				C471D06E1B5FE3CC00BAD5D4 /* LPYTabBar.m in Sources */,
@@ -769,6 +789,7 @@
 				C440BB161B64F475008A026D /* LPYPushGuideView.m in Sources */,
 				C46A0F151B70BCA7003A7890 /* LPYHelpClass.m in Sources */,
 				C4B418411B5FC9090096569F /* LPYTabBarController.m in Sources */,
+				C4314E931B722591001D5887 /* LPYPublishSegementViewController.m in Sources */,
 				C4DCBDF01B6C98360072E2ED /* LPYEssenceTopicsVoice.m in Sources */,
 				C46A0F111B70B32E003A7890 /* LPYEssenceTopicsCommentCell.m in Sources */,
 				C45DD7F61B6E352500042089 /* LPYEssenceTopicUserModel.m in Sources */,
@@ -777,6 +798,7 @@
 				C4CB4C4B1B6B0505005695F6 /* LPYPublishViewController.m in Sources */,
 				C484047D1B6D0D370002F860 /* LPYEssenceTopicsMoive.m in Sources */,
 				C404F96C1B6A836D00BD6196 /* LPYPictureLargeViewController.m in Sources */,
+				C4314EA91B7234BC001D5887 /* LPYPlaceholderTextView.m in Sources */,
 				C471D06A1B5FD87400BAD5D4 /* UIImage+LPYImage.m in Sources */,
 				C4CB4C4F1B6B54F1005695F6 /* LPYPublishView.m in Sources */,
 				C4809BB51B61E73200E60BCF /* LPYUserCell.m in Sources */,

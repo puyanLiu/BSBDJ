@@ -24,4 +24,20 @@
     image = [image stretchableImageWithLeftCapWidth:image.size.width * 0.5 topCapHeight:image.size.height * 0.5];
     return image;
 }
+
+- (instancetype)imageStyle
+{
+    UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0);
+    
+    CGContextRef ctr = UIGraphicsGetCurrentContext();
+    CGRect rect = CGRectMake(0, 0, self.size.width, self.size.height);
+    CGContextAddEllipseInRect(ctr, rect);
+    // 裁剪
+    CGContextClip(ctr);
+    
+    [self drawInRect:rect];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
 @end

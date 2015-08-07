@@ -23,5 +23,15 @@
  *
  *  @return <#return value description#>
  */
-+ (instancetype) imageStretchableWithNamed:(NSString *)name;
++ (instancetype)imageStretchableWithNamed:(NSString *)name;
+
+/**
+ *  图片样式
+ *
+ *  @param image <#image description#>
+ *
+ *  @return <#return value description#>
+ */
+- (instancetype)imageStyle;
+
 @end

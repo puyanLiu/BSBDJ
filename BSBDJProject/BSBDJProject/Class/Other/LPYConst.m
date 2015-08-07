@@ -27,10 +27,13 @@ CGFloat const LPYEssenceTopicCellTopH = 55;
 CGFloat const LPYEssenceTopicCellBottomH = 35;
 
 // comment 男
-NSString const *LPYEssenceMale = @"m";
+NSString * const LPYEssenceMale = @"m";
 
 // comment 女
-NSString const *LPYEssenceFaMale = @"f";
+NSString * const LPYEssenceFaMale = @"f";
 
 // status bar 高度
 CGFloat const LPYStatusBarH = 20.0;
+
+// 点击TabBar发送通知
+NSString * const LPYTabBarDidClickNotification = @"LPYTabBarDidClickNotification";

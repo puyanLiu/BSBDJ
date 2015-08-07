@@ -14,6 +14,7 @@
 #import <SVProgressHUD.h>
 #import "LPYEssenceTopicsCell.h"
 #import "LPYEssenceTopicCommentViewController.h"
+#import "LPYNewViewController.h"
 
 @interface LPYEssenceTopicViewController ()
 /** topics */
@@ -23,6 +24,9 @@
 @property (nonatomic,strong) NSMutableDictionary *params;
 
 @property (nonatomic,copy) NSString *maxtime;
+
+/** 记录当前选中的索引 */
+@property (nonatomic,assign) NSInteger lastSelectedIndex;
 @end
 
 @implementation LPYEssenceTopicViewController
@@ -46,6 +50,25 @@
     CGFloat top = LPYEssenceNavigationAndStateH + LPYEssenceTitleH;
     CGFloat bottom = LPYEssenceTabBarH;
     self.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
+    
+    // 监听通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarSelectedClick) name:LPYTabBarDidClickNotification object:nil];
+}
+
+// 点击更新数据源
+- (void)tabBarSelectedClick
+{
+    if(self.tabBarController.selectedViewController == self.navigationController)
+    {
+        // 更新数据源 view在当前窗口显示
+        // 在当前界面连续点击两次，才刷新
+        if([UIView isShowOnKeyWindow:self.view] && self.lastSelectedIndex == self.tabBarController.selectedIndex)
+        {
+            [self.tableView.header beginRefreshing];
+        }
+    }
+    // 记录当前选中的索引
+    self.lastSelectedIndex = self.tabBarController.selectedIndex;
 }
 
 static NSString * const essenceTopicsCell = @"essenceTopicsCell";
@@ -67,13 +90,24 @@ static NSString * const essenceTopicsCell = @"essenceTopicsCell";
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LPYEssenceTopicsCell class]) bundle:nil] forCellReuseIdentifier:essenceTopicsCell];
 }
 
+- (NSString *)a
+{
+    // 新帖 父控制器LPYNewViewController
+    if([self.parentViewController isKindOfClass:[LPYNewViewController class]])
+    {
+        return @"newlist";
+    }
+    // 精华 父控制器 LPYEssenceViewController
+    return @"list";
+}
+
 // 加载头部数据
 - (void)loadHeaderData
 {
     AFHTTPSessionManager *httpSessionManger = [AFHTTPSessionManager manager];
 //    httpSessionManger.requestSerializer.timeoutInterval = 10;
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
+    params[@"a"] = [self a];
     params[@"c"] = @"data";
     params[@"type"] = @(self.essenceTopicType);
     
@@ -112,7 +146,7 @@ static NSString * const essenceTopicsCell = @"essenceTopicsCell";
 //    httpSessionManger.requestSerializer.timeoutInterval = 10;
     
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
+    params[@"a"] = [self a];
     params[@"c"] = @"data";
     params[@"type"] = @(self.essenceTopicType);
     params[@"maxtime"] = self.maxtime;

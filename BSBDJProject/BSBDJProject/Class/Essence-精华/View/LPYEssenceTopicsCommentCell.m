@@ -47,7 +47,15 @@
 - (void)setCommentModel:(LPYEssenceTopicCommentModel *)commentModel
 {
     _commentModel = commentModel;
-    [self.photoImageView sd_setImageWithURL:[NSURL URLWithString:self.commentModel.user.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    
+//    UIImage *placeholderImage = [UIImage imageNamed:@"defaultUserIcon"];
+//    placeholderImage = [placeholderImage imageStyle];
+//    [self.photoImageView sd_setImageWithURL:[NSURL URLWithString:self.commentModel.user.profile_image] placeholderImage:placeholderImage completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+//        self.photoImageView.image = [image imageStyle] ? : placeholderImage;
+//    }];
+    
+    // 设置头像
+    [self.photoImageView setHeaderImageWithUrl:self.commentModel.user.profile_image];
     
     if(self.commentModel.user.sex == LPYEssenceMale)
     {

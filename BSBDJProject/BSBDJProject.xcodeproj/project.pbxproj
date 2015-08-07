@@ -67,6 +67,7 @@
 		C4A3525D1B5FC034002C2E39 /* BSBDJProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A3525C1B5FC034002C2E39 /* BSBDJProjectTests.m */; };
 		C4A352811B5FC31D002C2E39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A352791B5FC31D002C2E39 /* AppDelegate.m */; };
 		C4A3FCB61B67B19E004619CE /* LPYEssenceTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A3FCB51B67B19E004619CE /* LPYEssenceTopicModel.m */; };
+		C4AFB0471B74B62A00C7D982 /* UIImageView+LPYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AFB0461B74B62A00C7D982 /* UIImageView+LPYExtension.m */; };
 		C4B418411B5FC9090096569F /* LPYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B418401B5FC9090096569F /* LPYTabBarController.m */; };
 		C4CB4C4B1B6B0505005695F6 /* LPYPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CB4C491B6B0505005695F6 /* LPYPublishViewController.m */; };
 		C4CB4C4C1B6B0505005695F6 /* LPYPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4CB4C4A1B6B0505005695F6 /* LPYPublishViewController.xib */; };
@@ -197,6 +198,8 @@
 		C4A352791B5FC31D002C2E39 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C4A3FCB41B67B19E004619CE /* LPYEssenceTopicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYEssenceTopicModel.h; sourceTree = "<group>"; };
 		C4A3FCB51B67B19E004619CE /* LPYEssenceTopicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYEssenceTopicModel.m; sourceTree = "<group>"; };
+		C4AFB0451B74B62A00C7D982 /* UIImageView+LPYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LPYExtension.h"; sourceTree = "<group>"; };
+		C4AFB0461B74B62A00C7D982 /* UIImageView+LPYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LPYExtension.m"; sourceTree = "<group>"; };
 		C4B4183F1B5FC9090096569F /* LPYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYTabBarController.h; sourceTree = "<group>"; };
 		C4B418401B5FC9090096569F /* LPYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYTabBarController.m; sourceTree = "<group>"; };
 		C4CB4C481B6B0505005695F6 /* LPYPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYPublishViewController.h; sourceTree = "<group>"; };
@@ -257,6 +260,8 @@
 				C471D0841B5FF41000BAD5D4 /* UIBarButtonItem+LPYBarButtonItem.m */,
 				C4996A711B68EEF1005F5983 /* NSDate+LPYDate.h */,
 				C4996A721B68EEF1005F5983 /* NSDate+LPYDate.m */,
+				C4AFB0451B74B62A00C7D982 /* UIImageView+LPYExtension.h */,
+				C4AFB0461B74B62A00C7D982 /* UIImageView+LPYExtension.m */,
 			);
 			path = Catagory;
 			sourceTree = "<group>";
@@ -809,6 +814,7 @@
 				C4996A761B68F5AF005F5983 /* LPYConst.m in Sources */,
 				C471D0851B5FF41000BAD5D4 /* UIBarButtonItem+LPYBarButtonItem.m in Sources */,
 				C440BB121B64F3D7008A026D /* LPYLoginOrRegisterViewController.m in Sources */,
+				C4AFB0471B74B62A00C7D982 /* UIImageView+LPYExtension.m in Sources */,
 				C471D0891B5FFB1900BAD5D4 /* LPYRecommendViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -30,10 +30,13 @@ UIKIT_EXTERN CGFloat const LPYEssenceTopicCellTopH;
 UIKIT_EXTERN CGFloat const LPYEssenceTopicCellBottomH;
 
 // comment 男
-UIKIT_EXTERN NSString const *LPYEssenceMale;
+UIKIT_EXTERN NSString * const LPYEssenceMale;
 
 // comment 女
-UIKIT_EXTERN NSString const *LPYEssenceFaMale;
+UIKIT_EXTERN NSString * const LPYEssenceFaMale;
 
 // status bar 高度
 UIKIT_EXTERN CGFloat const LPYStatusBarH;
+
+// 点击TabBar发送通知
+UIKIT_EXTERN NSString * const LPYTabBarDidClickNotification;

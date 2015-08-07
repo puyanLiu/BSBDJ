@@ -11,7 +11,7 @@
 #import "LPYPushGuideView.h"
 #import "LPYScrollViewWindow.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <UITabBarControllerDelegate>
 
 @end
 
@@ -26,7 +26,7 @@
     
     // 添加TabBarController
     UITabBarController *tabBarController = [[LPYTabBarController alloc] init];
-    
+    tabBarController.delegate = self;
     self.window.rootViewController = tabBarController;
     
     [self.window makeKeyAndVisible];
@@ -35,6 +35,14 @@
     [LPYPushGuideView show];
     
     return YES;
+}
+
+// 方式一：通过代理发送通知
+// 方式二：通过点击按钮发送通知
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+    // 发送通知
+    [[NSNotificationCenter defaultCenter] postNotificationName:LPYTabBarDidClickNotification object:self userInfo:nil];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

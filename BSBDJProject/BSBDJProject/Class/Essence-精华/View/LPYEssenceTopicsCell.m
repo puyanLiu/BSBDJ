@@ -110,7 +110,17 @@
 {
     _essenceTopicModel = essenceTopicModel;
     
-    [self.photoIcon sd_setImageWithURL:[NSURL URLWithString:self.essenceTopicModel.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+//    UIImage *placeholderImage = [UIImage imageNamed:@"defaultUserIcon"];
+//    placeholderImage = [placeholderImage imageStyle];
+//    [self.photoIcon sd_setImageWithURL:[NSURL URLWithString:self.essenceTopicModel.profile_image] placeholderImage:placeholderImage completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+//        
+//        self.photoIcon.image = [image imageStyle] ? : placeholderImage;
+//        
+//    }];
+    
+    // 设置头像
+    [self.photoIcon setHeaderImageWithUrl:self.essenceTopicModel.profile_image];
+    
     self.sina_vIcon.hidden = !self.essenceTopicModel.isSina_v;
     self.lblUserName.text = self.essenceTopicModel.screen_name;
     

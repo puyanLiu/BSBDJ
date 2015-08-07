@@ -32,6 +32,7 @@
 #define LPYScreenHeight [UIScreen mainScreen].bounds.size.height
 
 #import "UIImage+LPYImage.h"
+#import "UIImageView+LPYExtension.h"
 #import "UIView+LPYView.h"
 #import "UIBarButtonItem+LPYBarButtonItem.h"
 #import "LPYConst.h"

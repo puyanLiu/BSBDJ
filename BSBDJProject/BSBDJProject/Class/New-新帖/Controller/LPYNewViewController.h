@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 liupuyan. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "LPYEssenceViewController.h"
 
-@interface LPYNewViewController : UIViewController
+@interface LPYNewViewController : LPYEssenceViewController
 
 @end

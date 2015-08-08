@@ -8,11 +8,28 @@
 
 #import "LPYShowTagView.h"
 
-@implementation LPYShowTagView
+@interface LPYShowTagView()
 
-+ (instancetype)showTagView
+@property (weak, nonatomic) IBOutlet UIView *topView;
+
+@end
+
+@implementation LPYShowTagView
+- (void)awakeFromNib
 {
-    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
+    // 添加按钮
+    UIButton *addBtn = [[UIButton alloc] init];
+    [addBtn setImage:[UIImage imageNamed:@"tag_add_icon"] forState:UIControlStateNormal];
+//    addBtn.size = [UIImage imageNamed:@"tag_add_icon"].size;
+//    addBtn.size = [addBtn imageForState:UIControlStateNormal].size;
+    addBtn.size = addBtn.currentImage.size;
+    [addBtn addTarget:self action:@selector(btnAddClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.topView addSubview:addBtn];
 }
 
+// 添加标签
+- (void)btnAddClick
+{
+    
+}
 @end

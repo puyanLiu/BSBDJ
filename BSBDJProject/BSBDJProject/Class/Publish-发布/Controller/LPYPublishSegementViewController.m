@@ -31,13 +31,14 @@
     [self setupTextView];
     
     // 监听键盘通知
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidChangeFrame:) name:UIKeyboardDidChangeFrameNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
 }
-
 - (void)keyboardDidChangeFrame:(NSNotification *)note
 {
-    CGRect keyboardRect = [note.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
-    self.showTagView.y = LPYScreenHeight - keyboardRect.origin.y;
+    CGRect keyboardStartRect = [note.userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+    CGRect keyboardEndRect = [note.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    CGFloat ty = keyboardEndRect.origin.y - keyboardStartRect.origin.y;
+    self.showTagView.transform = CGAffineTransformTranslate(self.showTagView.transform, 0, ty);
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
@@ -55,7 +56,7 @@
     self.placeholderTextView = textView;
     
     // 显示标签
-    LPYShowTagView *tagView = [LPYShowTagView showTagView];
+    LPYShowTagView *tagView = [LPYShowTagView viewFromXib];
     CGFloat tagH = 100;
     tagView.frame = CGRectMake(0, LPYScreenHeight - tagH, LPYScreenWidth, tagH);
     [self.view addSubview:tagView];
@@ -75,9 +76,8 @@
 
 - (void)btnLeftClick
 {
-    self.placeholderTextView.placeholderColor = [UIColor redColor];
-    self.placeholderTextView.placeholderFont = [UIFont systemFontOfSize:20];
-    LPYLog(@"------");
+    [self.view endEditing:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)btnRightClick

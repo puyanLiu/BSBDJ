@@ -44,11 +44,6 @@
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:pictureLarge animated:YES completion:nil];
 }
 
-+ (instancetype)essenceTopicsVoice
-{
-    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] lastObject];
-}
-
 - (void)setEssenceTopicModel:(LPYEssenceTopicModel *)essenceTopicModel
 {
     _essenceTopicModel = essenceTopicModel;

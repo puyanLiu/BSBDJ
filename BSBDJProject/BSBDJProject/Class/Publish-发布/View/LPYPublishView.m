@@ -22,12 +22,6 @@
 
 @implementation LPYPublishView
 
-+ (instancetype)publishView
-{
-    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] lastObject];
-}
-
-
 UIWindow *_window;
 + (void)show
 {
@@ -36,7 +30,7 @@ UIWindow *_window;
     _window.frame = [UIScreen mainScreen].bounds;
     _window.hidden = NO;
     
-    LPYPublishView *publish = [LPYPublishView publishView];
+    LPYPublishView *publish = [LPYPublishView viewFromXib];
     publish.frame = [UIScreen mainScreen].bounds;
     [_window addSubview:publish];
 }

@@ -46,4 +46,6 @@
  */
 + (BOOL)isShowOnKeyWindow:(UIView *)view;
 
+// 从xib中加载
++ (instancetype)viewFromXib;
 @end

@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface LPYPublishView : UIView
-+ (instancetype)publishView;
 
 + (void)show;
 @end

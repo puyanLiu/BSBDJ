@@ -65,7 +65,7 @@
 {
     if(_essenceTopicsPicture == nil)
     {
-        LPYEssenceTopicsPicture *picture = [LPYEssenceTopicsPicture essenceTopicsPicture];
+        LPYEssenceTopicsPicture *picture = [LPYEssenceTopicsPicture viewFromXib];
         [self addSubview:picture];
         _essenceTopicsPicture = picture;
     }
@@ -77,7 +77,7 @@
 {
     if(_essenceTopicsVoice == nil)
     {
-        LPYEssenceTopicsVoice *voice = [LPYEssenceTopicsVoice essenceTopicsVoice];
+        LPYEssenceTopicsVoice *voice = [LPYEssenceTopicsVoice viewFromXib];
         [self addSubview:voice];
         _essenceTopicsVoice = voice;
     }
@@ -85,16 +85,11 @@
     return _essenceTopicsVoice;
 }
 
-+ (instancetype)essenceTopicsCell
-{
-    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] lastObject];
-}
-
 - (LPYEssenceTopicsMoive *)essenceTopicsMoive
 {
     if(_essenceTopicsMoive == nil)
     {
-        LPYEssenceTopicsMoive *movie = [LPYEssenceTopicsMoive essenceTopicsMoive];
+        LPYEssenceTopicsMoive *movie = [LPYEssenceTopicsMoive viewFromXib];
         [self addSubview:movie];
         _essenceTopicsMoive = movie;
     }

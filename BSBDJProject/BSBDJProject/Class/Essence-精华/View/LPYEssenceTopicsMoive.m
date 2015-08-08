@@ -38,11 +38,6 @@
     
 }
 
-+ (instancetype)essenceTopicsMoive
-{
-    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] lastObject];
-}
-
 - (void)setEssenceTopicModel:(LPYEssenceTopicModel *)essenceTopicModel
 {
     _essenceTopicModel = essenceTopicModel;

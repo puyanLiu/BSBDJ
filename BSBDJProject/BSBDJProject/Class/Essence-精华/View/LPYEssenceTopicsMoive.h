@@ -11,7 +11,6 @@
 
 @interface LPYEssenceTopicsMoive : UIView
 
-+ (instancetype)essenceTopicsMoive;
 
 /** essenceTopicModel */
 @property (nonatomic,strong) LPYEssenceTopicModel *essenceTopicModel;

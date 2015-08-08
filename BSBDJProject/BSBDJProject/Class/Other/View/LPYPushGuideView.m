@@ -10,11 +10,6 @@
 
 @implementation LPYPushGuideView
 
-+ (instancetype)pushGuideView
-{
-    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] lastObject];
-}
-
 - (IBAction)clost {
     [self removeFromSuperview];
 }
@@ -32,7 +27,7 @@
     {
         // 显示推送引导
         UIWindow *window = [UIApplication sharedApplication].keyWindow;
-        LPYPushGuideView *guide = [LPYPushGuideView pushGuideView];
+        LPYPushGuideView *guide = [LPYPushGuideView viewFromXib];
         guide.frame = window.frame;
         [window addSubview:guide];
         

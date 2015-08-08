@@ -39,11 +39,6 @@
     self.backgroundView = bgImageView;
 }
 
-+ (instancetype)essenceTopicsCommentCell
-{
-    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
-}
-
 - (void)setCommentModel:(LPYEssenceTopicCommentModel *)commentModel
 {
     _commentModel = commentModel;

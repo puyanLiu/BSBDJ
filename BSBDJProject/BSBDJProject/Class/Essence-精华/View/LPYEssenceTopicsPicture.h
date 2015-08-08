@@ -11,8 +11,6 @@
 
 @interface LPYEssenceTopicsPicture : UIView
 
-+ (instancetype)essenceTopicsPicture;
-
 /** essenceTopicModel */
 @property (nonatomic,strong) LPYEssenceTopicModel *essenceTopicModel;
 @end

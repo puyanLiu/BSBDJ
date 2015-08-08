@@ -14,5 +14,4 @@
 /** comment Model */
 @property (nonatomic,strong) LPYEssenceTopicCommentModel *commentModel;
 
-+ (instancetype)essenceTopicsCommentCell;
 @end

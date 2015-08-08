@@ -11,8 +11,6 @@
 
 @interface  LPYEssenceTopicsCell: UITableViewCell
 
-+ (instancetype)essenceTopicsCell;
-
 /** model */
 @property (nonatomic,strong) LPYEssenceTopicModel *essenceTopicModel;
 

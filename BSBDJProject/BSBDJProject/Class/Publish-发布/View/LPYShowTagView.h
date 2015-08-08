@@ -9,5 +9,4 @@
 #import <UIKit/UIKit.h>
 
 @interface LPYShowTagView : UIView
-+ (instancetype)showTagView;
 @end

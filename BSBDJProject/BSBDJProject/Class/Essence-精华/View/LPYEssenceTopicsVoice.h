@@ -10,9 +10,6 @@
 #import "LPYEssenceTopicModel.h"
 
 @interface LPYEssenceTopicsVoice : UIView
-
-+ (instancetype)essenceTopicsVoice;
-
 /** essenceTopicModel */
 @property (nonatomic,strong) LPYEssenceTopicModel *essenceTopicModel;
 @end

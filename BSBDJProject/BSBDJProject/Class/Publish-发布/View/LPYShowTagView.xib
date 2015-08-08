@@ -68,6 +68,9 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="topView" destination="UiN-9m-5la" id="z0T-0Z-Fvk"/>
+            </connections>
             <point key="canvasLocation" x="183.5" y="516"/>
         </view>
     </objects>

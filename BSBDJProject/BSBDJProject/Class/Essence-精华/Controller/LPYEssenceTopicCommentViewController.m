@@ -127,7 +127,7 @@ static NSString *cellID = @"comment";
     self.tableView.estimatedRowHeight = 44;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     
-    LPYEssenceTopicsCell *header = [LPYEssenceTopicsCell essenceTopicsCell];
+    LPYEssenceTopicsCell *header = [LPYEssenceTopicsCell viewFromXib];
     
     UIView *view = [[UIView alloc] init];
     

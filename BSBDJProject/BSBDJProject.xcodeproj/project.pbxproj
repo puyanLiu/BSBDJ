@@ -68,6 +68,12 @@
 		C4A352811B5FC31D002C2E39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A352791B5FC31D002C2E39 /* AppDelegate.m */; };
 		C4A3FCB61B67B19E004619CE /* LPYEssenceTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A3FCB51B67B19E004619CE /* LPYEssenceTopicModel.m */; };
 		C4AFB0471B74B62A00C7D982 /* UIImageView+LPYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AFB0461B74B62A00C7D982 /* UIImageView+LPYExtension.m */; };
+		C4AFB04A1B74D69200C7D982 /* LPYMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AFB0491B74D69200C7D982 /* LPYMeCell.m */; };
+		C4AFB04D1B74DB9500C7D982 /* LPYMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AFB04C1B74DB9500C7D982 /* LPYMeFooterView.m */; };
+		C4AFB0501B74DC4000C7D982 /* LPYMeActiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AFB04F1B74DC4000C7D982 /* LPYMeActiveModel.m */; };
+		C4AFB0531B74EEB200C7D982 /* LPYMeActiveButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AFB0521B74EEB200C7D982 /* LPYMeActiveButton.m */; };
+		C4AFB0571B74FBA000C7D982 /* LPYWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4AFB0551B74FBA000C7D982 /* LPYWebViewController.m */; };
+		C4AFB0581B74FBA000C7D982 /* LPYWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4AFB0561B74FBA000C7D982 /* LPYWebViewController.xib */; };
 		C4B418411B5FC9090096569F /* LPYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B418401B5FC9090096569F /* LPYTabBarController.m */; };
 		C4CB4C4B1B6B0505005695F6 /* LPYPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CB4C491B6B0505005695F6 /* LPYPublishViewController.m */; };
 		C4CB4C4C1B6B0505005695F6 /* LPYPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4CB4C4A1B6B0505005695F6 /* LPYPublishViewController.xib */; };
@@ -200,6 +206,17 @@
 		C4A3FCB51B67B19E004619CE /* LPYEssenceTopicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYEssenceTopicModel.m; sourceTree = "<group>"; };
 		C4AFB0451B74B62A00C7D982 /* UIImageView+LPYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LPYExtension.h"; sourceTree = "<group>"; };
 		C4AFB0461B74B62A00C7D982 /* UIImageView+LPYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LPYExtension.m"; sourceTree = "<group>"; };
+		C4AFB0481B74D69200C7D982 /* LPYMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYMeCell.h; sourceTree = "<group>"; };
+		C4AFB0491B74D69200C7D982 /* LPYMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYMeCell.m; sourceTree = "<group>"; };
+		C4AFB04B1B74DB9500C7D982 /* LPYMeFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYMeFooterView.h; sourceTree = "<group>"; };
+		C4AFB04C1B74DB9500C7D982 /* LPYMeFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYMeFooterView.m; sourceTree = "<group>"; };
+		C4AFB04E1B74DC4000C7D982 /* LPYMeActiveModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYMeActiveModel.h; sourceTree = "<group>"; };
+		C4AFB04F1B74DC4000C7D982 /* LPYMeActiveModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYMeActiveModel.m; sourceTree = "<group>"; };
+		C4AFB0511B74EEB200C7D982 /* LPYMeActiveButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYMeActiveButton.h; sourceTree = "<group>"; };
+		C4AFB0521B74EEB200C7D982 /* LPYMeActiveButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYMeActiveButton.m; sourceTree = "<group>"; };
+		C4AFB0541B74FBA000C7D982 /* LPYWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYWebViewController.h; sourceTree = "<group>"; };
+		C4AFB0551B74FBA000C7D982 /* LPYWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYWebViewController.m; sourceTree = "<group>"; };
+		C4AFB0561B74FBA000C7D982 /* LPYWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPYWebViewController.xib; sourceTree = "<group>"; };
 		C4B4183F1B5FC9090096569F /* LPYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYTabBarController.h; sourceTree = "<group>"; };
 		C4B418401B5FC9090096569F /* LPYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPYTabBarController.m; sourceTree = "<group>"; };
 		C4CB4C481B6B0505005695F6 /* LPYPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPYPublishViewController.h; sourceTree = "<group>"; };
@@ -480,6 +497,9 @@
 			children = (
 				C471D0801B5FF16E00BAD5D4 /* LPYMeViewController.h */,
 				C471D0811B5FF16E00BAD5D4 /* LPYMeViewController.m */,
+				C4AFB0541B74FBA000C7D982 /* LPYWebViewController.h */,
+				C4AFB0551B74FBA000C7D982 /* LPYWebViewController.m */,
+				C4AFB0561B74FBA000C7D982 /* LPYWebViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -487,6 +507,8 @@
 		C4A352711B5FC31D002C2E39 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C4AFB04E1B74DC4000C7D982 /* LPYMeActiveModel.h */,
+				C4AFB04F1B74DC4000C7D982 /* LPYMeActiveModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -494,6 +516,12 @@
 		C4A352721B5FC31D002C2E39 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C4AFB0481B74D69200C7D982 /* LPYMeCell.h */,
+				C4AFB0491B74D69200C7D982 /* LPYMeCell.m */,
+				C4AFB04B1B74DB9500C7D982 /* LPYMeFooterView.h */,
+				C4AFB04C1B74DB9500C7D982 /* LPYMeFooterView.m */,
+				C4AFB0511B74EEB200C7D982 /* LPYMeActiveButton.h */,
+				C4AFB0521B74EEB200C7D982 /* LPYMeActiveButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -706,6 +734,7 @@
 				C4A352511B5FC034002C2E39 /* LaunchScreen.xib in Resources */,
 				C45DD7FB1B6E449500042089 /* LPYEssenceTopicCommentViewController.xib in Resources */,
 				C404F96D1B6A836D00BD6196 /* LPYPictureLargeViewController.xib in Resources */,
+				C4AFB0581B74FBA000C7D982 /* LPYWebViewController.xib in Resources */,
 				C4CB4C511B6B5501005695F6 /* LPYPublishView.xib in Resources */,
 				C471D08A1B5FFB1900BAD5D4 /* LPYRecommendViewController.xib in Resources */,
 				C46A0F121B70B32E003A7890 /* LPYEssenceTopicsCommentCell.xib in Resources */,
@@ -776,12 +805,14 @@
 				C4A352811B5FC31D002C2E39 /* AppDelegate.m in Sources */,
 				C471D06E1B5FE3CC00BAD5D4 /* LPYTabBar.m in Sources */,
 				C471D07F1B5FF15900BAD5D4 /* LPYNewViewController.m in Sources */,
+				C4AFB0571B74FBA000C7D982 /* LPYWebViewController.m in Sources */,
 				C440BB1E1B651128008A026D /* LPYLoginOrRegisterTextField.m in Sources */,
 				C471D0711B5FE9D300BAD5D4 /* LPYNavigationController.m in Sources */,
 				C4809BB11B61D61B00E60BCF /* LPYCategoryModel.m in Sources */,
 				C471D06B1B5FD87400BAD5D4 /* UIView+LPYView.m in Sources */,
 				C4A352431B5FC033002C2E39 /* main.m in Sources */,
 				C4996A731B68EEF1005F5983 /* NSDate+LPYDate.m in Sources */,
+				C4AFB04A1B74D69200C7D982 /* LPYMeCell.m in Sources */,
 				C493FD3A1B62A15A0046ACEB /* LPYRecommendTagsCell.m in Sources */,
 				C4809BB91B61F8DB00E60BCF /* LPYRecommendUserModel.m in Sources */,
 				C46A0F0D1B70AB27003A7890 /* LPYEssenceTopicCommentHeaderView.m in Sources */,
@@ -804,11 +835,14 @@
 				C484047D1B6D0D370002F860 /* LPYEssenceTopicsMoive.m in Sources */,
 				C404F96C1B6A836D00BD6196 /* LPYPictureLargeViewController.m in Sources */,
 				C4314EA91B7234BC001D5887 /* LPYPlaceholderTextView.m in Sources */,
+				C4AFB0531B74EEB200C7D982 /* LPYMeActiveButton.m in Sources */,
 				C471D06A1B5FD87400BAD5D4 /* UIImage+LPYImage.m in Sources */,
 				C4CB4C4F1B6B54F1005695F6 /* LPYPublishView.m in Sources */,
 				C4809BB51B61E73200E60BCF /* LPYUserCell.m in Sources */,
+				C4AFB0501B74DC4000C7D982 /* LPYMeActiveModel.m in Sources */,
 				C440BB1B1B650267008A026D /* LPYContentVerticalButton.m in Sources */,
 				C471D0821B5FF16E00BAD5D4 /* LPYMeViewController.m in Sources */,
+				C4AFB04D1B74DB9500C7D982 /* LPYMeFooterView.m in Sources */,
 				C4A3FCB61B67B19E004619CE /* LPYEssenceTopicModel.m in Sources */,
 				C404F9681B6A7AF000BD6196 /* LPYLabeledCircularProgressView.m in Sources */,
 				C4996A761B68F5AF005F5983 /* LPYConst.m in Sources */,

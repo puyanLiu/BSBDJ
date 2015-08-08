@@ -10,8 +10,6 @@
 
 @interface LPYPushGuideView : UIView
 
-+ (instancetype)pushGuideView;
-
 + (void)show;
 
 @end

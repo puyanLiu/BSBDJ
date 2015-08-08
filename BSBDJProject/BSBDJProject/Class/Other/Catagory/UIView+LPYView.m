@@ -110,4 +110,9 @@
     CGRect newRect = [view.superview convertRect:view.frame toView:window];
     return view.window == window && !view.hidden && view.alpha > 0.01 && CGRectIntersectsRect(windowRect, newRect);
 }
+
++ (instancetype)viewFromXib
+{
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
+}
 @end
